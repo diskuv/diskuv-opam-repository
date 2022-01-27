@@ -23,6 +23,9 @@ setenv: [
   [CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"]
   [CC = "cl.exe"]
 ]
+build-env: [
+  [MSYS2_ARG_CONV_EXCL = "*"]
+]
 build: [
   # This used to be:
   #   ["./configure" "--prefix=%{prefix}%" "--host=x86_64-pc-windows"]
