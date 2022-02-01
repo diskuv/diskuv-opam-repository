@@ -24,7 +24,7 @@ opam repository add diskuv-0.3.3 'git+https://github.com/diskuv/diskuv-opam-repo
 
 ## Prereleases
 
-The current prerelease version (if any) is `0.4.0-prerel5`. Use the prerelease only if you have been given
+The current prerelease version (if any) is `0.4.0-prerel6`. Use the prerelease only if you have been given
 special instructions to do so.
 
 ## How to Contribute
