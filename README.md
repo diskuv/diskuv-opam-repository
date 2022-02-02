@@ -19,7 +19,7 @@ opam switch create SWITCHNAME --repos 'default,diskuv-0.3.3=git+https://github.c
 You can also add this repository to the current Opam switch with:
 
 ```bash
-opam repository add diskuv-0.3.3 'git+https://github.com/diskuv/diskuv-opam-repository.git#v0.3.3'
+opam repository add diskuv-0.3.3 --rank 1 'git+https://github.com/diskuv/diskuv-opam-repository.git#v0.3.3'
 ```
 
 ## Prereleases
