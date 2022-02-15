@@ -44,7 +44,11 @@ install: [
 ]
 maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
 url {
-  src: "https://github.com/diskuv/dkml-component-ocamlcompiler.git#main"
+  src: "https://github.com/diskuv/dkml-component-ocamlcompiler/archive/refs/tags/v0.4.0-prerel12.tar.gz"
+  checksum: [
+    "md5=8fb079cc4c5b86faa09498e60cf82cb3"
+    "sha512=182f0cb57da3e4ae619ac08bac2ba035ce410b242b450c5110c156398d9cfee7f856434abc02bd32f51739fbf7964a3be8432e78c4ae2d8afb28ad647ac66ca2"
+  ]
 }
 extra-source "dl/findlib-1.9.1.tar.gz" {
   src: "http://download.camlcity.org/download/findlib-1.9.1.tar.gz"
