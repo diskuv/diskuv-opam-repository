@@ -34,4 +34,7 @@ url {
   src: "https://github.com/janestreet/base/archive/v0.14.1.tar.gz"
   checksum: "md5=e4419eae60f57e553b154856f0cacf42"
 }
-patches: ["backport.commit.BitScanForward.2e594935c42fe76c53fe43894404b7295ef8d881.patch"]
+patches: [
+  "backport.commit.BitScanForward.2e594935c42fe76c53fe43894404b7295ef8d881.patch"
+  "win32_decide_BitScanReverse.patch"
+]
