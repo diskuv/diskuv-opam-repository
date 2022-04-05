@@ -45,10 +45,10 @@ install: [
 ]
 maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
 url {
-  src: "https://github.com/diskuv/conf-dkml-cross-toolchain/archive/refs/tags/v4.12.1-1.tar.gz"
+  src: "https://github.com/diskuv/conf-dkml-cross-toolchain/archive/refs/tags/v4.12.1.tar.gz"
   checksum: [
-    "md5=9ea61f036425cc891976c253fbfdfad3"
-    "sha512=2788eaa38d62c489e39e5dd430d0c8da17833e13c5c487d9654b97b2bb4791362c96f39fa56120b2cc10cef66630b39467975d0f1af6ca2d4716d9e3c8744a74"
+    "md5=3be7b8b182ccd96e48989b4e57311193"
+    "sha512=f3781cbb4e9e190df38c3fe7fa80ba69bf6f9dbafb158e0426dd4604f2f1ba794450679005a38d0f9f1dad0696e2f22b8b086b2d7d08a0f99bb4fd3b0f7ed5d8"
   ]
 }
 extra-source "dl/findlib-1.9.1.tar.gz" {
