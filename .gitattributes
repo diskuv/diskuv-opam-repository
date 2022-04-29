@@ -17,6 +17,7 @@
 *.install text eol=lf
 *.md text eol=lf
 *.ml text eol=lf
+*.ml.in text eol=lf
 *.mli text eol=lf
 *.opam text eol=lf
 *.patch text eol=lf
