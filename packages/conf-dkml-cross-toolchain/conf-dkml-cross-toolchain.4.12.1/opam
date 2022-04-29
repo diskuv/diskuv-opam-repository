@@ -1,6 +1,4 @@
 opam-version: "2.0"
-name: "conf-dkml-cross-toolchain"
-version: "4.12.1"
 synopsis: "Add findlib toolchains for all installed DKML cross-compilers"
 authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
 license: "Apache-2.0"
@@ -9,8 +7,8 @@ bug-reports: "https://github.com/diskuv/dkml-compiler/issues"
 depends: [
   "ocamlfind"           {>= "1.9.1"}
   "ocaml"               {= "4.12.1"}
-  "ocaml-system"        {= "4.12.1"} |
-  "dkml-base-compiler"  {= "4.12.1" }
+  "ocaml-system"        {>= "4.12.1~" & < "4.12.2~"} |
+  "dkml-base-compiler"  {>= "4.12.1~" & < "4.12.2~"}
 ]
 build: [
   [
@@ -47,8 +45,8 @@ maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
 url {
   src: "https://github.com/diskuv/conf-dkml-cross-toolchain/archive/refs/tags/v4.12.1.tar.gz"
   checksum: [
-    "md5=3be7b8b182ccd96e48989b4e57311193"
-    "sha512=f3781cbb4e9e190df38c3fe7fa80ba69bf6f9dbafb158e0426dd4604f2f1ba794450679005a38d0f9f1dad0696e2f22b8b086b2d7d08a0f99bb4fd3b0f7ed5d8"
+    "md5=603f5df69aa1bc7c6414a0196d473a7a"
+    "sha512=e5cc633749a8f64b86a370448aba50de6c301a8e8b6266265679fb0702058ba3"
   ]
 }
 extra-source "dl/findlib-1.9.1.tar.gz" {
