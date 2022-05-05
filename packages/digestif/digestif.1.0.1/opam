@@ -52,12 +52,12 @@ conflicts: [
 ]
 build: [
   ["dune" "build" "-p" name "-j" jobs]
-  ["./install/install.ml"]
+  ["ocaml" "./install/install.ml"]
   ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 install: [
   ["dune" "install" "-p" name] {with-test}
-  ["./test/test_runes.ml"] {with-test}
+  ["ocaml" "./test/test_runes.ml"] {with-test}
 ]
 dev-repo: "git+https://github.com/mirage/digestif.git"
 url {
