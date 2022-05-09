@@ -1,0 +1,76 @@
+opam-version: "2.0"
+synopsis:
+  "Runtime scripts used by CLI applications and Opam plugins in a Diskuv OCaml installation"
+maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
+authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
+license: "Apache-2.0"
+homepage: "https://diskuv.gitlab.io/diskuv-ocaml"
+bug-reports: "https://github.com/diskuv/dkml-runtime-apps/issues"
+depends: [
+  "dune" {>= "2.9"}
+  "ocaml" {>= "4.12.1"}
+  "dkml-c-probe" {>= "2.0.0~"}
+  "odoc" {with-doc}
+]
+dev-repo: "git+https://github.com/diskuv/dkml-runtime-apps.git"
+build: [
+  # Create a DKMLDIR. Its structure mimics a git submodule setup.
+
+  #   <dkmldir>/vendor/drc/
+  ["install" "-d" "dkmldir/vendor/drc"]
+  ["tar" "xCfz" "dkmldir/vendor/drc" "dl/dkml-runtime-common.tar.gz" "--strip-components=1"]
+
+  #   <dkmldir>/vendor/drd/
+  ["install" "-d" "dkmldir/vendor/drd"]
+  ["tar" "xCfz" "dkmldir/vendor/drd" "dl/dkml-runtime-distribution.tar.gz" "--strip-components=1"]
+
+  #   <dkmldir>/vendor/dkml-compiler/
+  ["install" "-d" "dkmldir/vendor/dkml-compiler/src"]
+  ["tar" "xCfz" "dkmldir/vendor/dkml-compiler" "dl/dkml-compiler.tar.gz" "--strip-components=1"]
+
+  # Ordinary Dune
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+extra-source "dl/dkml-runtime-common.tar.gz" {
+  src: "https://github.com/diskuv/dkml-runtime-common/archive/refs/tags/v0.4.0-prerel21.tar.gz"
+  checksum: [
+    "sha256=67ed41124c320a9f28abd4266bbab983f289b7c4e80d8fb451faf80e691bbf76"
+  ]
+}
+extra-source "dl/dkml-runtime-distribution.tar.gz" {
+  src: "https://github.com/diskuv/dkml-runtime-distribution/archive/refs/tags/v0.4.0-prerel20_r2.tar.gz"
+  checksum: [
+    "sha256=85e6244b49cdacf359d1ff1d3cc59d68096e6686e657b7d6ad4cceea48ccc198"
+  ]
+}
+# The particular version of dkml-compiler (4.12.1, etc.) is unimportant. Only
+# the `src/standard-compiler-env-to-ocaml-configure-(env|launcher).sh` files
+# are captured in `src/common/dune`. TODO: May even want those two scripts to be
+# promoted into dkml-runtime-(common|distribution), so we can drop this
+# dependency.
+extra-source "dl/dkml-compiler.tar.gz" {
+  src: "https://github.com/diskuv/dkml-compiler/archive/refs/tags/v4.12.1-prerel11.tar.gz"
+  checksum: [
+    "md5=d8c46fef8df02a89db552e20b572e481"
+    "sha256=27675482efe46a762b66db09a2c1e7ff6671cdd8df62aace709e80a7519310b3"
+  ]
+}
+url {
+  src: "https://github.com/diskuv/dkml-runtime-apps/archive/refs/tags/v0.4.0-prerel25.tar.gz"
+  checksum: [
+    "sha256=3aabc41337cf181c4bb68d2ffde15cc69b7d8482b8f592c26fe0acc9f1c4c0f5"
+  ]
+}
