@@ -32,8 +32,8 @@ build: [
 ]
 dev-repo: "git+https://github.com/diskuv/dkml-runtime-apps.git"
 url {
-  src: "https://github.com/diskuv/dkml-runtime-apps/archive/refs/tags/v0.4.0-prerel20_r2.tar.gz"
+  src: "https://github.com/diskuv/dkml-runtime-apps/archive/refs/tags/v0.4.0-prerel20_r3.tar.gz"
   checksum: [
-    "sha256=2aedaec569acb6b5b03f0d732161639f2278bfba2e76b32cf5a803fd19488772"
+    "sha256=62c7d0c803b0a1ab2ed6fac328bdf9779f629f5e780e636252f17fa8c5a5b4c7"
   ]
 }
