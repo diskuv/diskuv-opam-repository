@@ -38,6 +38,8 @@ dev-repo: "git+https://github.com/ocaml/dune.git"
 build: [
   # native (Diskuv) win32 modification: install dune-real.exe instead of dune.exe
   ["sed" "-i" "s/(dune.exe as dune)/(dune.exe as dune-real)/" "bin/dune"] {os = "win32" & os-distribution = "win32"}
+  # native (Diskuv) win32 modification: use dune-real.exe instead of dune.exe
+  ["sed" "-i" "s/(run dune /(run dune-real /" "doc/dune.inc"] {os = "win32" & os-distribution = "win32"}
   # opam 2 sets OPAM_SWITCH_PREFIX, so we don't need a hardcoded path
   ["ocaml" "configure.ml" "--libdir" lib] {opam-version < "2"}
   ["ocaml" "bootstrap.ml" "-j" jobs]
