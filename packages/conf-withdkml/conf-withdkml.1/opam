@@ -1,0 +1,76 @@
+opam-version: "2.0"
+maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
+homepage: "https://diskuv.gitlab.io/diskuv-ocaml"
+bug-reports: "https://github.com/diskuv/dkml-runtime-apps/issues"
+authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
+license: "Apache-2.0"
+build: [
+  # find location of with-dkml.exe
+  [
+    "with-dkml"
+    "sh"
+    "-eufc"
+    """
+    x=$(command -v with-dkml)
+    if [ -x /usr/bin/cygpath ]; then
+      cygpath -am "$x"    > var.with-dkml.location.mixed
+      cygpath -aw "$x"    > var.with-dkml.location.native
+    else
+      printf '%s\n' "$x"  > var.with-dkml.location.mixed
+      printf '%s\n' "$x"  > var.with-dkml.location.native
+    fi
+    """
+  ]
+  # get sha256 checksum
+  [
+    "with-dkml"
+    "sh"
+    "-eufc"
+    """
+    # From crossplatform-functions.sh:
+    # [sha256compute FILE] writes the SHA256 checksum (hex encoded) of file FILE to the standard output.
+    sha256compute() {
+        sha256compute_FILE="$1"
+        shift
+        if [ -x /usr/bin/shasum ]; then
+            /usr/bin/shasum -a 256 "$sha256compute_FILE" | awk '{print $1}'
+        elif [ -x /usr/bin/sha256sum ]; then
+            /usr/bin/sha256sum "$sha256compute_FILE" | awk '{print $1}'
+        else
+            printf "FATAL: %s\n" "No sha256 checksum utility found" >&2
+            exit 107
+        fi
+    }
+
+    sha256compute $(< var.with-dkml.location.mixed) > with-dkml.sha256
+    """
+  ]
+  # write <pkgname>.config
+  #   confer: https://opam.ocaml.org/doc/Manual.html#lt-pkgname-gt-config
+  [
+    "with-dkml"
+    "sh"
+    "-eufc"
+    """
+    backslash='\\'
+    {
+      printf 'opam-version: "2.0"\n'
+      printf 'file-depends: [ [ "%s" "sha256=%s" ] ]\n' "$(< var.with-dkml.location.mixed )" "$(< with-dkml.sha256 )"
+      printf 'variables {\n'
+      printf '  location-native: "%s"\n' "$(< var.with-dkml.location.native)" | sed "s/[$backslash]/$backslash$backslash$backslash$backslash/g"
+      printf '  location-mixed: "%s"\n' "$(< var.with-dkml.location.mixed )"
+      printf '}\n'
+    } > %{name}%.config
+    """
+  ]
+]
+synopsis: "Virtual package relying on with-dkml"
+description:
+  """\
+This package can only install if the with-dkml.exe program is installed on the system.
+
+The %{conf-withdkml:location-native}% variable will be the native (Win32, Unix) location
+of with-dkml.exe, while %{conf-withdkml:location-mixed}% will be the
+location of with-dkml.exe using only forward slashes (/).
+"""
+flags: conf

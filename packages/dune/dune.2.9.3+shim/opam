@@ -36,21 +36,34 @@ conflicts: [
 ]
 dev-repo: "git+https://github.com/ocaml/dune.git"
 build: [
-  # native (Diskuv) win32 modification: install dune-real.exe instead of dune.exe
-  ["sed" "-i" "s/(dune.exe as dune)/(dune.exe as dune-real)/" "bin/dune"] {os = "win32" & os-distribution = "win32"}
-  # native (Diskuv) win32 modification: use dune-real.exe instead of dune.exe
-  ["sed" "-i" "s/(run dune /(run dune-real /" "doc/dune.inc"] {os = "win32" & os-distribution = "win32"}
+  # modification:
+  # 1. install dune-real.exe instead of dune.exe
+  # 2. use dune-real.exe instead of dune.exe
+  [
+    "%{conf-withdkml:location-native}%"
+    "sh"
+    "-eufc"
+    """
+    sed -i 's/(dune.exe as dune)/(dune.exe as dune-real)/'  bin/dune
+    sed -i 's/(run dune /(run dune-real /'                  doc/dune.inc
+    sed -i 's/{bin:dune}/{bin:dune-real}/g'                 doc/dune
+    """
+  ]  {conf-withdkml:installed}
   # opam 2 sets OPAM_SWITCH_PREFIX, so we don't need a hardcoded path
   ["ocaml" "configure.ml" "--libdir" lib] {opam-version < "2"}
   ["ocaml" "bootstrap.ml" "-j" jobs]
   ["./dune.exe" "build" "-p" name "--profile" "dune-bootstrap" "-j" jobs]
 ]
 install: [
-  # native (Diskuv) win32 modification: use with-dkml.exe shim as dune.exe (which will delegate to dune-real.exe)
+  # modification: use with-dkml.exe shim as dune.exe (which will delegate to dune-real.exe)
   # note: we can't just make a dependency on dkml-apps to get with-dkml.exe because dkml-apps
   #       requires Dune.
-  # todo: it will be more portable to download a versioned 32-bit AMD/Intel with-dkml.exe binary using [extra-source]
-  ["sh" "-c" "install \"$DiskuvOCamlHome/usr/bin/with-dkml.exe\" '%{bin}%/dune.exe'"]  {os = "win32" & os-distribution = "win32"}
+  [
+    "%{conf-withdkml:location-native}%"
+    "sh"
+    "-c"
+    "install '%{conf-withdkml:location-native}%' '%{bin}%/dune.exe'"
+  ]  {conf-withdkml:installed}
 ]
 depends: [
   # Please keep the lower bound in sync with .github/workflows/workflow.yml,
@@ -58,6 +71,9 @@ depends: [
   ("ocaml" {>= "4.08"} | ("ocaml" {< "4.08~~"} & "ocamlfind-secondary"))
   "base-unix"
   "base-threads"
+]
+depopts: [
+  "conf-withdkml"
 ]
 url {
   src:
