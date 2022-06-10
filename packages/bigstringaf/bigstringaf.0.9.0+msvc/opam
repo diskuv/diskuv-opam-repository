@@ -37,9 +37,9 @@ Bigstrings and other string-like types.
 So here they are. Go crazy.
 """
 url {
-  src: "https://github.com/jonahbeckford/bigstringaf/archive/0.9.0+msvc.tar.gz"
+  src: "https://github.com/jonahbeckford/bigstringaf/archive/0.9.0+msvc_r2.tar.gz"
   checksum: [
-    "md5=ce70a5e2051f504ae836ccad5c5d53dd"
-    "sha512=f301ceade2fead8121dabd7b7300ed3dae8532f7b89d67b89332a1868cdf1afd7dc45a2aaa6e1b8593d869637b0830b02c5a06b0edaeb0703ea21ad0565313f1"
+    "md5=b69ace6db8391e6e3c40bd07c433768a"
+    "sha512=a1b44f1ba964cb52725c55265f7749042eb17bb0bd15c91516404223a40b4841a22cb637beb997cf37604224155cc3b7a04534f8a73b6c0693627b6048cd64af"
   ]
 }
