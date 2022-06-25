@@ -58,9 +58,11 @@ conflicts: [
   "ocaml-freestanding" {< "0.6.0"}
 ]
 url {
-  src: "https://github.com/jonahbeckford/digestif/archive/v1.1.2.tar.gz"
+  # commit fc510e57bbb27ceb020ca73b1067e79a1b933f47 is 7 commits ahead of 1.1.2
+  # and includes MSVC patches
+  src: "https://github.com/mirage/digestif/archive/fc510e57bbb27ceb020ca73b1067e79a1b933f47.tar.gz"
   checksum: [
-    "md5=1d293e2e25c165f6c2769a367f3064e7"
-    "sha512=7acaccd3560ce9f0019b272d63b6d947afe5a4360d096139e14354e8039a0c8680dd3abbe2d011095a901303ec6b5036ba51d6ecd924e8660efeaca5cedf437d"
+    "sha256=7624b7501a70b0d77baf2c039a48685826fc7a2bb77855a91bbcf9502952d200"
+    "sha512=ab69fcd4a2bd978855b716c99b2bfa514fa8f26a7a0a197f8f6c7105f879e8ae74d79cac24d4313efe433abb6d47cb74fff97c499e81bbadf0be52d0f03d0fc2"
   ]
 }
