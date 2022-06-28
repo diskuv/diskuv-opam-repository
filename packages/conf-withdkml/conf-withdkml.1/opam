@@ -4,6 +4,9 @@ homepage: "https://diskuv.gitlab.io/diskuv-ocaml"
 bug-reports: "https://github.com/diskuv/dkml-runtime-apps/issues"
 authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
 license: "Apache-2.0"
+build-env: [
+  [DKML_VER = "0.4.0"]
+]
 build: [
   # Load crossplatform-functions.sh to get the canonical with-dkml.exe location.
   # Don't just use whatever is in the PATH since our with-dkml.exe is tied
@@ -15,12 +18,20 @@ build: [
     "sh"
     "-eufc"
     """
-    tar xfz dkml-runtime-common.tar.gz --strip-components=1
+
+    # Create a DKMLDIR. Its structure mimics a git submodule setup.
+    #   <dkmldir>/.dkmlroot
+    install -d dkmldir
+    printf 'dkml_root_version=%s\n' $DKML_VER > dkmldir/.dkmlroot
+    #   <dkmldir>/vendor/drc/
+    install -d dkmldir/vendor/drc
+    tar xCfz dkmldir/vendor/drc dkml-runtime-common.tar.gz --strip-components=1
 
     # Load common functions
     TOPDIR=topdir-not-present
     USERMODE=${CONF_WITHDKML_USERMODE:-ON}
-    . unix/_common_tool.sh
+    DKMLDIR="$PWD/dkmldir"
+    . dkmldir/vendor/drc/unix/_common_tool.sh
 
     # Calculate BUILDHOST_ARCH
     autodetect_buildhost_arch
@@ -74,8 +85,8 @@ extra-source "dkml-runtime-common.tar.gz" {
   # The version is mostly unimportant; dkml-runtime-common just needs to have
   # an `crossplatform-functions.sh` that can locate with-dkml.exe on recent
   # installations.
-  src: "https://github.com/diskuv/dkml-runtime-common/archive/refs/tags/v0.4.0-prerel66.tar.gz"
+  src: "https://github.com/diskuv/dkml-runtime-common/archive/refs/tags/v0.4.0-prerel91.tar.gz"
   checksum: [
-    "sha256=c72bc78f33ef44630bd0669af07bdd3ba70575341758c66ba9aacf64bac7ca23"
+    "sha256=5273593ec2a531d403555a463912fb03537efcd0d2e8accc1db5665524bd51a1"
   ]
 }
