@@ -35,3 +35,9 @@ If there is a good reason to place the changes in this repository, the
 [main opam-repository CONTRIBUTING.md](https://github.com/ocaml/opam-repository/blob/master/CONTRIBUTING.md)
 document has general guidelines on how to contribute that apply equally to
 the `diskuv-opam-repository`.
+
+The command you'll use to submit a PR is:
+
+```bash
+opam publish --repo diskuv/diskuv-opam-repository --target-branch main
+```
