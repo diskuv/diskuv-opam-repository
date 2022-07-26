@@ -81,4 +81,6 @@ patches: [
     #    let exe = ".exe"
     #    let version = "0.14.0"
     "ocamlbuild-0.14.0.diskuvocaml.patch" {os = "win32"}
+    # Handle installation directories that have spaces
+    "ocamlbuild-0.14.0.diskuvocaml2.patch" {os = "win32"}
 ]
