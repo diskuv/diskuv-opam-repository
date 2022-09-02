@@ -99,7 +99,8 @@ url {
   ]
 }
 extra-source "dkml-runtime-apps.tar.gz" {
-  src: "https://github.com/diskuv/dkml-runtime-apps/releases/download/v1.0.1/src.tar.gz"
+  # TODO: This should be v1.0.1 when released to Opam.
+  src: "https://github.com/diskuv/dkml-runtime-apps/releases/download/v1.0.1-prerel3/src.tar.gz"
   checksum: [
     "md5=1db734387c7e7cc37a8c04ca9cd75212"
     "sha512=80324e1a78756238570aefd11d97ce0c4aac4289fd6cd5bc36c496167684d2fc1fe0b773268a8220f1749dc29a96dfa55a969455f9d40669c899b9ef69605c12"
