@@ -39,7 +39,7 @@ build: [
   # modification 1: rename [dune.exe -> dune-real.exe] and [with-dkml.exe -> dune.exe]
   [
     "sh"
-    "-euc"
+    "-eucx"
     """
     # Rename dune.exe to dune-real.exe
     sed 's/(dune.exe as dune)/(dune.exe as dune-real)/'  bin/dune     > bin/dune.new
