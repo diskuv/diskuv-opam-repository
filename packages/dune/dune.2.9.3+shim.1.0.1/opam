@@ -67,8 +67,13 @@ build: [
     echo '(package (name dkml-runtimescripts))' >> dune-project
     echo '(package (name dkml-apps))' >> dune-project
 
-    # Don't bundle the duniverse Dune since this Opam package already builds a Dune bootstrap
-    rm -r dkml-runtime-apps/duniverse/dune_
+    # Don't bundle the duniverse Dune since this Opam package already builds a Dune bootstrap.
+    # sigh: need to workaround https://github.com/trapexit/mergerfs/issues/468
+    # * when deleting in Vagrant on macos-12 GitHub CI machine, can encounter these failures.
+    if ! rm -rf dkml-runtime-apps/duniverse/dune_; then
+      for i in $(seq 1 1000); do rm -rf dkml-runtime-apps/duniverse/dune_ || true; done
+      rm -rf dkml-runtime-apps/duniverse/dune_
+    fi
     """
   ] {name = "dune"}
   # opam 2 sets OPAM_SWITCH_PREFIX, so we don't need a hardcoded path
