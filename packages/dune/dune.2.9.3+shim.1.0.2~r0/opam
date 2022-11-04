@@ -80,7 +80,7 @@ build: [
   ["ocaml" "configure.ml" "--libdir" lib] {opam-version < "2"}
   ["ocaml" "bootstrap.ml" "-j" jobs]
   #   modification 2:
-  #     a) build both dune and with-dkml
+  #     a) build both dune and with-dkml (and all of its dependencies because the bootstrap Dune does not do transitive dependencies)
   ["./dune.exe" "build" "-p" "%{name}%,dkml-runtimelib,dune-configurator,with-dkml" "--profile" "dune-bootstrap" "-j" jobs] {name = "dune"}
   #     b) potential problem: dkml-runtimelib and dune-configurator are dependencies of with-dkml, and they (including with-dkml source code)
   #        will be installed as a undesired side-effect. So we remove any of their generated '.install' files.
@@ -94,6 +94,8 @@ depends: [
   ("ocaml" {>= "4.08"} | ("ocaml" {< "4.08~~"} & "ocamlfind-secondary"))
   "base-unix"
   "base-threads"
+  #   modification 3: install dkml-runtime-common
+  "dkml-runtime-common" {>= "1.0.2~prerel0"}
 ]
 url {
   src:
