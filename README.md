@@ -13,7 +13,7 @@ be explicitly versioned.
 When you create a switch use the `--repos` option as follows:
 
 ```bash
-opam switch create SWITCHNAME --repos 'default,diskuv-1.0.2-prerel1=git+https://github.com/diskuv/diskuv-opam-repository.git#v1.0.2-prerel1' ocaml-variants.4.12.1+options+dkml+msvc64
+opam switch create SWITCHNAME --repos 'default,diskuv-1.0.2-prerel1=git+https://github.com/diskuv/diskuv-opam-repository.git#v1.0.2-prerel1' 4.12.1
 ```
 
 You can also add this repository to the current Opam switch with:
