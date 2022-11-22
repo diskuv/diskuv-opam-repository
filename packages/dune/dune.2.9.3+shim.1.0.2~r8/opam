@@ -112,5 +112,7 @@ extra-source "dkml-runtime-apps.tar.gz" {
 }
 extra-files: [
   ["_dune-of-dkml-runtime-apps" "md5=9089511e3630c473a574b39479abafd7"]
+  ["custom.patch" "md5=8314e0ca0e7b3d9e33147156fc37184f"]
 ]
 x-commit-hash: "dea03875affccc0620e902d28fed8d6b4351e112"
+patches: ["custom.patch"]
