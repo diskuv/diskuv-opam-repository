@@ -104,10 +104,10 @@ url {
   ]
 }
 extra-source "dkml-runtime-apps.tar.gz" {
-  src: "https://github.com/diskuv/dkml-runtime-apps/releases/download/1.0.2-prerel8-r2/src.tar.gz"
+  src: "https://github.com/diskuv/dkml-runtime-apps/releases/download/1.0.2-prerel11/src.tar.gz"
   checksum: [
-    "sha256=899933b104f07b9c9af416ec9411d1c1bc4118bff3a418ae29891826a6c6d29f"
-    "sha512=4fd2261d128cc2ba3775583053f1cb491316979da764aaf3474228d4ada14e6aa604a59842d01ed134dcf9f7278c410d13dcadb874384d772b24f05a43eabbac"
+    "sha256=a1bd0618e5d965e9f0a1fe82f4a8247ec0ee326fa15258ca1f436d04501102a6"
+    "sha512=887766b4c3918d2e940acc1bc00b6bd13814f01fdc33bbf73b131e236a1417a81ce3cfcd9aa05901060827fc13385c3e52f715924d6b5e2b29065dfa03cc85b5"
   ]
 }
 extra-files: [
