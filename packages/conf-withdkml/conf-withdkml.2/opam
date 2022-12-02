@@ -7,7 +7,7 @@ license: "Apache-2.0"
 depends: [
   # should dkml-runtime-common-native be a flags:conf package since it is a dependency
   # of a flags:conf package?
-  "dkml-runtime-common-native" {>= "1.0.2~prerel16"} # nit: should be >=prerel17 once it exists
+  "dkml-runtime-common-native" {>= "1.0.2~prerel17"}
 ]
 build: [
   # Load crossplatform-functions.sh to get the canonical with-dkml.exe location.
