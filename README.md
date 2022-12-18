@@ -13,13 +13,13 @@ be explicitly versioned.
 When you create a switch use the `--repos` option as follows:
 
 ```bash
-opam switch create SWITCHNAME --repos 'default,diskuv-1.1.0-prerel7=git+https://github.com/diskuv/diskuv-opam-repository.git#v1.1.0-prerel7' 4.12.1
+opam switch create SWITCHNAME --repos 'default,diskuv-1.1.0-prerel7=git+https://github.com/diskuv/diskuv-opam-repository.git#1.1.0-prerel7' 4.12.1
 ```
 
 You can also add this repository to the current Opam switch with:
 
 ```bash
-opam repository add diskuv-1.1.0-prerel7 --rank 1 'git+https://github.com/diskuv/diskuv-opam-repository.git#v1.1.0-prerel7'
+opam repository add diskuv-1.1.0-prerel7 --rank 1 'git+https://github.com/diskuv/diskuv-opam-repository.git#1.1.0-prerel7'
 ```
 
 ## Prereleases
