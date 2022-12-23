@@ -42,4 +42,8 @@ url {
     "sha512=d0dd69ada2f1583319a2d6f679b8d49998059117c3258805ee69ae3e71d47bfab7a9c646f19b5fc43a6ccdef934eb87de5bb81205fcd60968bed8bf1790cf0a3"
   ]
 }
+patches: [
+  # https://github.com/ocaml/dune/pull/6565
+  "pr6565.patch"
+]
 x-commit-hash: "c939c2b0f7a470cedd189988c61cd307a3cedace"
