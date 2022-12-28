@@ -23,8 +23,8 @@ install: [
   ["./install.sh"   "%{_:lib}%"] {!(os = "win32")}
 ]
 url {
-  src: "https://github.com/diskuv/dkml-runtime-common/archive/refs/tags/1.1.0+xcopy.tar.gz"
+  src: "https://github.com/diskuv/dkml-runtime-common/archive/refs/tags/1.1.0+xcopy+nodot.tar.gz"
   checksum: [
-    "sha256=3020aba93aac869315c2209c924d5299bbde2b11adfc6f816375a442ecd1de9d"
+    "sha256=a9539f42c1dcce93bd52cb445266422e11d831d9c83db2dc59b00f73d08db8bd"
   ]
 }
