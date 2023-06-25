@@ -1,4 +1,4 @@
-# Diskuv Opam Repository 1.2.1-8
+# Diskuv Opam Repository 1.2.1-9
 
 This `diskuv-opam-repository` contains supplemental OCaml package and compiler
 metadata for the DKML distribution, and needs to be added explicitly to most
@@ -13,18 +13,18 @@ be explicitly versioned.
 When you create a switch use the `--repos` option as follows:
 
 ```bash
-opam switch create SWITCHNAME --repos 'default,diskuv-1.2.1-8=git+https://github.com/diskuv/diskuv-opam-repository.git#1.2.1-8' 4.14.0
+opam switch create SWITCHNAME --repos 'default,diskuv-1.2.1-9=git+https://github.com/diskuv/diskuv-opam-repository.git#1.2.1-9' 4.14.0
 ```
 
 You can also add this repository to the current Opam switch with:
 
 ```bash
-opam repository add diskuv-1.2.1-8 --rank 1 'git+https://github.com/diskuv/diskuv-opam-repository.git#1.2.1-8'
+opam repository add diskuv-1.2.1-9 --rank 1 'git+https://github.com/diskuv/diskuv-opam-repository.git#1.2.1-9'
 ```
 
 ## Prereleases
 
-The current version is `1.2.1-8`, and if it is a prerelease it will have the
+The current version is `1.2.1-9`, and if it is a prerelease it will have the
 format `MAJOR.MINOR.PATCH-PRERELEASE`. Use a prerelease only if you have been
 given special instructions to do so.
 
