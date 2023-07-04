@@ -88,6 +88,6 @@ install: [
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-common.tar.gz"
   checksum: [
-    "sha512=a4fc2e6e903eef443131bd9a50d97725537fb9af70b95168a3b7ba8ce84d8010aa1c57ef93e8742b6819af3eafa42c43a8264b27c1f1365ffffa3f3e7b37098b"
+    "sha512=cf1d5c6c77e4714aee26f3210518bdd7d086d7ea44fd7f59cc99620b8e2d76f5522dd2c1b5272f4fc1f8a1186888ac5630712e53e6c92d9dffd80d4d8466250d"
   ]
 }
