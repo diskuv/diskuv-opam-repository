@@ -25,7 +25,7 @@ build: [
   ["dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} "@doc" {with-doc}]
 ]
 url {
-  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-common.tar.gz"
+  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-workflows.tar.gz"
   checksum: [
     "sha512=63a888d59660f24364bff607860e821337567d09211936a8de133ba8b95e7c17a57665a6d0160a7ac0e32a2e237732f46a81405a80d9826b9ead73dd41dcab08"
   ]

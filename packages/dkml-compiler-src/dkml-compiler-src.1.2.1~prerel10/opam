@@ -15,7 +15,7 @@ install: [
 ]
 dev-repo: "git+https://github.com/diskuv/dkml-compiler.git"
 url {
-  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-common.tar.gz"
+  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-compiler.tar.gz"
   checksum: [
     "sha512=028b65f22baabc6284c5a7a501d1f70f1220de022b4f7662fdc3fdd3c7693d4d795c25f01e8a3f282c50d5816313d422d4025ed47c83b5d8715a47392cc7e490"
   ]

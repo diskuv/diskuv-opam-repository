@@ -43,7 +43,7 @@ install: [
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-dkml-apps-only-dkml-confdir.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%" ]
 ]
 url {
-  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-common.tar.gz"
+  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
     "sha512=2b54c097b0805778993cd09b95bf3312410009aaddac582e08bc3488fc76bd894a7ccf88fb81fc071e7feebc0826b457b17edaa9dde9f185fcec2247ee0e82ac"
   ]

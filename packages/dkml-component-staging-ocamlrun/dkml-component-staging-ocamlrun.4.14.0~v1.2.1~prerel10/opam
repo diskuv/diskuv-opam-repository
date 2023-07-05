@@ -186,7 +186,7 @@ extra-source "dl/homebrew-bundle.tar.gz" {
   ]
 }
 url {
-  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-common.tar.gz"
+  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-component-ocamlrun.tar.gz"
   checksum: [
     "sha512=19383ca8bb64bca854f9c6b711626ee5d4111f69366e630abaaaae472d10693c336694d8c7a2686eb073dea3d645273463d0ebe38c672625690c1e41c79c28de"
   ]

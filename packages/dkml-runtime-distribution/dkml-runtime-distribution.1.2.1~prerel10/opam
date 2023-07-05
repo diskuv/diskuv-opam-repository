@@ -27,7 +27,7 @@ install: [
   ["diskuvbox" "copy-dir" "src" "%{_:lib}%/src"]
 ]
 url {
-  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-common.tar.gz"
+  src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/1.2.1-10/downloads/src.dkml-runtime-distribution.tar.gz"
   checksum: [
     "sha512=2d0a67b5235d5e06c4add8c269503b02bc17d5f356b6a097da82fc8924c3c457df45c7b640936bf5f7e7c0e0ddd22d86b52e06dc0c1b3e5a15b19d15944080e5"
   ]
