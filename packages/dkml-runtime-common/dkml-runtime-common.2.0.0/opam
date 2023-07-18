@@ -11,7 +11,7 @@ homepage: "https://github.com/diskuv/dkml-runtime-common"
 bug-reports: "https://github.com/diskuv/dkml-runtime-common/issues"
 dev-repo: "git+https://github.com/diskuv/dkml-runtime-common.git"
 depends: [
-  "dune"
+  "dune" {>= "2.9"}
 ]
 build: [
   ["dune" "build" "-p" name]
@@ -19,6 +19,6 @@ build: [
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-runtime-common.tar.gz"
   checksum: [
-    "sha512=96be50637f4971445d2e161f259cff8788ee73a871a3e032e5651ef189b7a48f371e68b238fbaa14e411563be818b158973708dde1d010a29e4f29a1dc2693fe"
+    "sha512=31ff6517f40d6d5c588776a64b156d59a95363f851a3162856a89348ccfcfa952ecf9d3c780cf1118ca93fca855543d038a85633676ad7dc996af32d9547b314"
   ]
 }
