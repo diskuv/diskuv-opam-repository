@@ -33,6 +33,6 @@ dev-repo:
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-component-ocamlcompiler.tar.gz"
   checksum: [
-    "sha512=e1c0c5aee9d9434ee3f79320c039364900737894821bb9558d74f81f96905be154ad4171905f48c47390b601a44fdfbe45a3f2bc00b8ddd36844e1f10a581fd0"
+    "sha512=46ecb6b8c2b871bb313d3cf3d0f3a7d475ed3baced2b66df7baaf9d207abe6f9e03841754bd89767c65d31c1bd79fa649e5b2daaa039c288eb5e29e8fe19d7e4"
   ]
 }

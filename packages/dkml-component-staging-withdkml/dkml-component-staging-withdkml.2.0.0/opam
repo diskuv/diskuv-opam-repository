@@ -41,6 +41,6 @@ install: [
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=2b14ee62f01150fac08f853ae9f38060b1f738825e588a8e9d5a30f6d0f32e7a7312c78249490c07f693f8b69e8c9142fe3b961aab98fac192cf51b36cf7579f"
+    "sha512=6074a4181003df88ef2ecae84e433cd9434c09ffb223fd78432d9d268497f751b1851c042ae97f22fd0a5501a1034e407cce0ecd7edb5f7decb85670e6efe46a"
   ]
 }
