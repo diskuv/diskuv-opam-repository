@@ -27,6 +27,6 @@ build: [
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-workflows.tar.gz"
   checksum: [
-    "sha512=9f97aada0065dc41f3f98e08d4de5e5026efd542b4c913c2c5177209df4da6d28f826f8ba993a7f2c6b5cbd8cc737842a27c97f6a98299fdde3105671fae7755"
+    "sha512=665f111ebc018bf0c5204dea335d073759fc81c20622b1ae347a86f04800e9eb6368d5e6077863a26446132b5cd8d12c105ee451ec35bd6fef569c5901f31bc4"
   ]
 }
