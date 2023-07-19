@@ -34,6 +34,6 @@ flags: plugin
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-runtime-apps.tar.gz"
   checksum: [
-    "sha512=2d7b682540cdc120c91a5c64c05e5bdbb1776e9c06003252967bfa34f9b307e9c0adfa9664d84af1fdd96b0ac8664a06c77afef907215eeffa4cffe97367c148"
+    "sha512=e911516b6e121da53f821fce7197dfa294c891d0a0b862021c26365d82296adad53d4898ee4244b73c548482e5bc12097a5ea525529f6167d5c0df53a3bd6f62"
   ]
 }

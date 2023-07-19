@@ -78,6 +78,7 @@ install: [
   [
     "env" "TOPDIR=dkmldir/vendor/drc/all/emptytop"
       "DKML_REPRODUCIBLE_SYSTEM_BREWFILE=%{_:build}%/Brewfile"
+      "bash"
       "dkmldir/vendor/dkml-compiler/src/r-c-ocaml-1-setup.sh"
       "-d" "dkmldir"
       "-f" "src/ocaml-1"
@@ -145,6 +146,7 @@ install: [
   [
     "env" "TOPDIR=dkmldir/vendor/drc/all/emptytop"
       "DKML_REPRODUCIBLE_SYSTEM_BREWFILE=%{_:build}%/Brewfile"
+      "bash"
       "dkmldir/vendor/dkml-compiler/src/r-c-ocaml-1-setup.sh"
       "-d" "dkmldir"
       "-f" "src/ocaml-2"
@@ -188,6 +190,6 @@ extra-source "dl/homebrew-bundle.tar.gz" {
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-component-ocamlrun.tar.gz"
   checksum: [
-    "sha512=06b3ce983fd5a8800d912d63b36083ec432a981d1a163c724e6dbb046e19c013f2ad0292a29bce4d0612e7c51010fd3a3d9133f0194e96449a47005f2e29d3ea"
+    "sha512=a96c6d331f5a04b59f88f968778fd115e8b61cc597c0572e59cacdf47285b13bf32c51c456f4cd07d7b5d9f780ba23ea437df11303ea1ec88415a3a31772a331"
   ]
 }

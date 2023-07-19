@@ -23,11 +23,11 @@ install: [
   # so we have to avoid the (correct) Command Prompt shell. Needs a bug
   # report. (jonahbeckford@ 2023-01-11)
   #[".\\install.cmd" "\"%{_:lib}%\""] { os = "win32"}
-  ["./install.sh"   "%{_:lib}%"] # {!(os = "win32")}
+  ["sh" "./install.sh"   "%{_:lib}%"] # {!(os = "win32")}
 ]
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-runtime-common.tar.gz"
   checksum: [
-    "sha512=31ff6517f40d6d5c588776a64b156d59a95363f851a3162856a89348ccfcfa952ecf9d3c780cf1118ca93fca855543d038a85633676ad7dc996af32d9547b314"
+    "sha512=5d24554c61ce297155f250d3b47a6d97e3ae0fa326a4b20d751ba086d2b812a150662e1a6bb420cbbe7f5efef5150b8408d4a9fc38ae3d9243601791e0757375"
   ]
 }

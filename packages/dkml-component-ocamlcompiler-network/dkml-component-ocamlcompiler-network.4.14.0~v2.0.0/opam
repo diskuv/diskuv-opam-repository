@@ -25,7 +25,6 @@ depends: [
   "diskuvbox" {>= "0.1.0"}
   "dkml-runtime-common" {>= "1.0.2~prerel9"}
   "dkml-runtime-distribution" {>= "1.0.2~prerel9"}
-  "crunch" {>= "3.3.1"}
   "alcotest" {>= "1.4.0" & with-test}
   "odoc" {with-doc}
 ]
@@ -127,6 +126,6 @@ extra-source "dl/flexdll.tar.gz" {
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-component-ocamlcompiler.tar.gz"
   checksum: [
-    "sha512=fe3063f3c48c1bf4d14941ce18d4a71d51f409355c9ba0d2e7e08486004cba89ea386f6d2304a021de438de9b93e3cdf028c5ead2fd3d24b27e5f74be9718a5e"
+    "sha512=cd8994a4432448acaf7c884e962ee5d5eb3e5b9e0509cc921d5eaec18a3b910b2fde1fcbb44b5ce4850ccd31b06f8d2d5c7ab69d0cf6e4d15e302c5de415485e"
   ]
 }

@@ -5,33 +5,6 @@ authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
 license: "Apache-2.0"
 homepage: "https://diskuv.gitlab.io/diskuv-ocaml"
 bug-reports: "https://github.com/diskuv/dkml-runtime-apps/issues"
-x-ci-accept-failures: [
-  # Currently opam CI does not have with-dkml.exe on any
-  # platform. Perhaps it never will?
-  "alpine-3.12"
-  "alpine-3.13"
-  "alpine-3.14"
-  "alpine-3.15"
-  "alpine-3.16"
-  "archlinux"
-  "centos-7"
-  "centos-8"
-  "debian-10"
-  "debian-11"
-  "debian-testing"
-  "debian-unstable"
-  "fedora-33"
-  "fedora-34"
-  "macos-homebrew"
-  "opensuse-15.2"
-  "opensuse-15.3"
-  "oraclelinux-7"
-  "oraclelinux-8"
-  "ubuntu-16.04"
-  "ubuntu-18.04"
-  "ubuntu-20.04"
-  "ubuntu-20.10"
-]
 depends: [
   "dune" {>= "2.9"}
   "ocaml" {>= "4.12.1"}
@@ -63,6 +36,6 @@ dev-repo: "git+https://github.com/diskuv/dkml-runtime-apps.git"
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.0/downloads/src.dkml-runtime-apps.tar.gz"
   checksum: [
-    "sha512=2d7b682540cdc120c91a5c64c05e5bdbb1776e9c06003252967bfa34f9b307e9c0adfa9664d84af1fdd96b0ac8664a06c77afef907215eeffa4cffe97367c148"
+    "sha512=e911516b6e121da53f821fce7197dfa294c891d0a0b862021c26365d82296adad53d4898ee4244b73c548482e5bc12097a5ea525529f6167d5c0df53a3bd6f62"
   ]
 }
