@@ -76,8 +76,8 @@ description: """
 This package can only install if the pkg-config package is installed
 on the system."""
 flags: conf
-# Find the latest DkSDK [cpkgs] version, and then make a new upload with:
-#   with-dkml make -C contributors upload-pkgconf CPKGS_VERSION=0.1.0
+# Find the latest DkSDK [cpkgs] version, and then make a new upload from [dkml] with:
+#   with-dkml make -C contributors upload-pkgconf PKGCONF_VERSION=1.8.0
 # It has 32-bit Windows pkgconf.exe, although more OSes can easily be added.
 # But really only Windows needs it.
 extra-source "pkgconf.tar.gz" {
