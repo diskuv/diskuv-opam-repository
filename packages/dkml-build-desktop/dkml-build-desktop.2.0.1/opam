@@ -38,6 +38,6 @@ dev-repo:
 url {
   src: "https://gitlab.com/diskuv-ocaml/distributions/dkml/-/releases/2.0.1/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=44b7b51b67f09d9629e8221a2a210be416bfcfbb209c23b3367511c5f79eb00f5b7ffddfde6d227b88c551d155962f0b36e74f4ca35fee4a2f9288710520c723"
+    "sha512=2ffa8ee1abbd4e98b44e0bdf424534bb48b4e2eb82ede290a1e630dcbe0e2dd30513ad1a67064afa670ac2b00990095d1498b0245d8f39099a8fb05cba83ccc2"
   ]
 }
