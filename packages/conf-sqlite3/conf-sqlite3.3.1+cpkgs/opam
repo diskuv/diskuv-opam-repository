@@ -17,6 +17,9 @@ build: [
   ["tar" "xvf" "sqlite3-x86.tar.gz"] {os-distribution = "msys2" & msystem-carch = "i686"}
 ]
 install: [
+  ["install" "-d" "%{bin}%"]                          {os-distribution = "msys2"}
+  ["install" "windows_x64/bin/sqlite3.dll" "%{bin}%"] {os-distribution = "msys2" & msystem-carch = "x86_64"}
+  ["install" "windows_x86/bin/sqlite3.dll" "%{bin}%"] {os-distribution = "msys2" & msystem-carch = "i686"}
   ["install" "-d" "%{prefix}%/include"]                                                               {os-distribution = "msys2"}
   ["install" "windows_x64/include/sqlite3.h" "windows_x64/include/sqlite3ext.h" "%{prefix}%/include"] {os-distribution = "msys2" & msystem-carch = "x86_64"}
   ["install" "windows_x86/include/sqlite3.h" "windows_x86/include/sqlite3ext.h" "%{prefix}%/include"] {os-distribution = "msys2" & msystem-carch = "i686"}
@@ -54,9 +57,9 @@ flags: conf
 #   with-dkml make -C contributors upload-sqlite3 SQLITE3_VERSION=3.40.0
 extra-source "sqlite3-x64.tar.gz" {
   src: "https://gitlab.com/api/v4/projects/diskuv-ocaml%2Fdistributions%2Fdkml/packages/generic/sqlite3/3.40.0/sqlite3-x64.tar.gz"
-  checksum: "sha256=bbc1d5e2f3a3f222a15fc0057419d0387f0d8c7b597b2b033de361999baed13a"
+  checksum: "sha256=a8a059f94dfb2047a7fd0a7bef7e3ee466afde8878c45daa43c6af159f3a6972"
 }
 extra-source "sqlite3-x86.tar.gz" {
   src: "https://gitlab.com/api/v4/projects/diskuv-ocaml%2Fdistributions%2Fdkml/packages/generic/sqlite3/3.40.0/sqlite3-x86.tar.gz"
-  checksum: "sha256=c289727a84dc0ac872481b3df86793372e7f661c43c2658ca00ac5424337ed7d"
+  checksum: "sha256=9cb42c06a0ad8528336fd39af579462790ba96fd5acb8168708cd9fcb9c287f1"
 }
