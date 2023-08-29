@@ -56,10 +56,10 @@ flags: conf
 # Find the latest DkSDK [cpkgs] version, and then make a new upload from [dkml] with:
 #   with-dkml make -C contributors upload-sqlite3 SQLITE3_VERSION=3.40.0
 extra-source "sqlite3-x64.tar.gz" {
-  src: "https://gitlab.com/api/v4/projects/diskuv-ocaml%2Fdistributions%2Fdkml/packages/generic/sqlite3/3.40.0/sqlite3-x64.tar.gz"
+  src: "https://gitlab.com/api/v4/projects/dkml%2Fdistributions%2Fdkml/packages/generic/sqlite3/3.40.0/sqlite3-x64.tar.gz"
   checksum: "sha256=a8a059f94dfb2047a7fd0a7bef7e3ee466afde8878c45daa43c6af159f3a6972"
 }
 extra-source "sqlite3-x86.tar.gz" {
-  src: "https://gitlab.com/api/v4/projects/diskuv-ocaml%2Fdistributions%2Fdkml/packages/generic/sqlite3/3.40.0/sqlite3-x86.tar.gz"
+  src: "https://gitlab.com/api/v4/projects/dkml%2Fdistributions%2Fdkml/packages/generic/sqlite3/3.40.0/sqlite3-x86.tar.gz"
   checksum: "sha256=9cb42c06a0ad8528336fd39af579462790ba96fd5acb8168708cd9fcb9c287f1"
 }

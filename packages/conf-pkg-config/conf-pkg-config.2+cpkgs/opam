@@ -81,6 +81,6 @@ flags: conf
 # It has 32-bit Windows pkgconf.exe, although more OSes can easily be added.
 # But really only Windows needs it.
 extra-source "pkgconf.tar.gz" {
-  src: "https://gitlab.com/api/v4/projects/diskuv-ocaml%2Fdistributions%2Fdkml/packages/generic/pkgconf/1.8.0/pkgconf.tar.gz"
+  src: "https://gitlab.com/api/v4/projects/dkml%2Fdistributions%2Fdkml/packages/generic/pkgconf/1.8.0/pkgconf.tar.gz"
   checksum: "sha256=929cc97a3271a9fe919afa5a471b8e19f522a65b23cc7e6de17b2de8a6364fc0"
 }
