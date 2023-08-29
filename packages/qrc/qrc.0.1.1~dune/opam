@@ -4,7 +4,6 @@ authors: ["The qrc programmers"]
 homepage: "https://github.com/jonahbeckford/qrc"
 doc: "https://erratique.ch/software/qrc/doc"
 license: "ISC"
-dev-repo: "git+https://erratique.ch/repos/qrc.git"
 bug-reports: "https://github.com/dbuenzli/qrc/issues"
 tags: [ "qr-code" "codec" "org:erratique" ]
 depends:
@@ -18,10 +17,10 @@ build: [ "dune" "build" "-p" name "-j" jobs ]
 dev-repo: "git+https://github.com/jonahbeckford/qrc.git"
 url {
   src:
-    "https://github.com/jonahbeckford/qrc/releases/download/duniverse-v16.0.0/src.tar.gz"
+    "https://github.com/jonahbeckford/qrc/releases/download/duniverse-v16.0.0/src2.tar.gz"
   checksum: [
-    "sha256=6314192841b4f3200d876b3e16adac6f2810cb68e923466466fd44ff711ad0ce"
-    "sha512=cebe97ef66783cf14c0219bef6c3343c85efb85f4c759ada0a7f375f8d00f5f68b3f399a52d869327f5a38cac09f2b20598faafaf30b55f40e98f77e02f1522e"
+    "sha256=87d67fb55079aef9a6f40f03b1053f819e080e88bcb501f69b8ec09b3d593c52"
+    "sha512=0fd40e456a7352b2c00126d812370fd83ed693bda0bdef9f0e1c9caf5367a432b203c1a1eb97f93e20d19daa2fa07a1b8a42bcc6a4f455415ad9bb07d0746f1f"
   ]
 }
-x-commit-hash: "510568b7d1b928793bc25ca0813160a89e711d7f"
+x-commit-hash: "669374aa7b8e77a4d26f8aeb7a648c7db7dee59b"
