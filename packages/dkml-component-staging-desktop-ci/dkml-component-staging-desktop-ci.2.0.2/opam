@@ -51,19 +51,19 @@ build: [
 
   # BEGIN build-flavor-ci. DO NOT EDIT THE LINES IN THIS SECTION
   # Managed by bump-packages.cmake. TODO: Use [opam] from dkml-component-opam
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files metapp > opamshow-metapp.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files ocaml-compiler-libs > opamshow-ocaml-compiler-libs.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files ocamlfind > opamshow-ocamlfind.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files ppx_derivers > opamshow-ppx_derivers.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files ppxlib > opamshow-ppxlib.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files refl > opamshow-refl.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files stdcompat > opamshow-stdcompat.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files stdlib-shims > opamshow-stdlib-shims.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files traverse > opamshow-traverse.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files xdg > opamshow-xdg.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files dkml-apps > opamshow-dkml-apps.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files dkml-exe > opamshow-dkml-exe.txt" ]
-  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --list-files dune > opamshow-dune.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files metapp > opamshow-metapp.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files ocaml-compiler-libs > opamshow-ocaml-compiler-libs.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files ocamlfind > opamshow-ocamlfind.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files ppx_derivers > opamshow-ppx_derivers.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files ppxlib > opamshow-ppxlib.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files refl > opamshow-refl.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files stdcompat > opamshow-stdcompat.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files stdlib-shims > opamshow-stdlib-shims.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files traverse > opamshow-traverse.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files xdg > opamshow-xdg.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files dkml-apps > opamshow-dkml-apps.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files dkml-exe > opamshow-dkml-exe.txt" ]
+  [ "sh" "-c" "'%{dkml-sys-opam-exe}%' show --readonly --list-files dune > opamshow-dune.txt" ]
   # END build-flavor-ci. DO NOT EDIT THE LINES ABOVE
 
   # NOTE: Below ocaml.exe + binaries and stdlib can replace the now
@@ -73,13 +73,13 @@ build: [
   #   The files C:/Users/WDAGUT~1/AppData/Local/Programs/DISKUV~1/lib/ocaml\stdlib.cmi
   #      and C:\Users\WDAGUT~1\AppData\Local\Programs\DISKUV~1\desktop\bc\lib\logs\logs.cmi
   #      make inconsistent assumptions over interface CamlinternalFormatBasics
-  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-base-compiler | awk -f scripts/stdlib.awk > opamshow-stdlib.txt" ]
+  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --readonly --list-files dkml-base-compiler | awk -f scripts/stdlib.awk > opamshow-stdlib.txt" ]
 
   # Need ocaml.exe and other binaries for "offline" installer
-  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-base-compiler | awk -f scripts/ocamlexe.awk > opamshow-ocamlexe.txt" ]
+  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --readonly --list-files dkml-base-compiler | awk -f scripts/ocamlexe.awk > opamshow-ocamlexe.txt" ]
 
   # Overwrite opamshow-dkml-apps.txt to exclude what we staged in staging-dkmlconfdir. There should not be overlap.
-  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-apps | grep -v dkml-confdir > opamshow-dkml-apps.txt" ]
+  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --readonly --list-files dkml-apps | grep -v dkml-confdir > opamshow-dkml-apps.txt" ]
 ]
 install: [
   # BEGIN install-flavor-ci. DO NOT EDIT THE LINES IN THIS SECTION
