@@ -14,6 +14,7 @@ depends: [
   "conf-dkml-sys-opam"
   "dkml-build-desktop" {= version}
   "dkml-install" {>= "0.2.0"}
+  "dkml-apps" {= "2.0.2"}
   "diskuvbox" {>= "0.1.0"}
   "sexplib" {>= "v0.14.0"}
   "bos" {>= "0.2.1"}
