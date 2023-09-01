@@ -73,13 +73,13 @@ build: [
   #   The files C:/Users/WDAGUT~1/AppData/Local/Programs/DISKUV~1/lib/ocaml\stdlib.cmi
   #      and C:\Users\WDAGUT~1\AppData\Local\Programs\DISKUV~1\desktop\bc\lib\logs\logs.cmi
   #      make inconsistent assumptions over interface CamlinternalFormatBasics
-  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-base-compiler | awk -f scripts/stdlib.awk > opamshow-stdlib.txt" ]
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-base-compiler | awk -f scripts/stdlib.awk > opamshow-stdlib.txt" ]
 
   # Need ocaml.exe and other binaries for "offline" installer
-  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-base-compiler | awk -f scripts/ocamlexe.awk > opamshow-ocamlexe.txt" ]
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-base-compiler | awk -f scripts/ocamlexe.awk > opamshow-ocamlexe.txt" ]
 
   # Overwrite opamshow-dkml-apps.txt to exclude what we staged in staging-dkmlconfdir. There should not be overlap.
-  [ "sh" "-c" "'%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-apps | grep -v dkml-confdir > opamshow-dkml-apps.txt" ]
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{conf-dkml-sys-opam:location-mixed}%' show --list-files dkml-apps | grep -v dkml-confdir > opamshow-dkml-apps.txt" ]
 ]
 install: [
   # BEGIN install-flavor-ci. DO NOT EDIT THE LINES IN THIS SECTION
