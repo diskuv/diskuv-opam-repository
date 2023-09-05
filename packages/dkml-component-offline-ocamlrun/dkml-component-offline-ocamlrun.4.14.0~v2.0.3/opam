@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "DKML staging component for ocamlrun"
+description:
+  "Standalone bytecode distribution of OCaml in <share>/staging-files containing just ocamlrun, the OCaml Stdlib and the other OCaml libraries (str, unix, bigarray, etc.)"
+maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
+authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
+license: "Apache-2.0"
+homepage: "https://github.com/diskuv/dkml-component-ocamlrun"
+bug-reports: "https://github.com/diskuv/dkml-component-ocamlrun/issues"
+depends: [
+  "dune" {>= "2.9"}
+  "dkml-install" {>= "0.2.0"}
+  "dkml-component-staging-ocamlrun" {= version}
+  "diskuvbox" {>= "0.1.0"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+dev-repo: "git+https://github.com/diskuv/dkml-component-ocamlrun.git"
+url {
+  src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.0.3/downloads/src.dkml-component-ocamlrun.tar.gz"
+  checksum: [
+    "sha512=5e671dc3cf44321f8350292a24cf252ed2a83270a013781513f0e9b40406062a4dd862f4c21cbe4e1fecdf9a1e3c581dd4b2960fa30e03f0a9627bab0383662e"
+  ]
+}
