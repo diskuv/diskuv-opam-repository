@@ -50,10 +50,10 @@ build: [
     backslash='\\'
     {
       printf 'opam-version: "2.0"\n'
-      printf 'file-depends: [ [ "%s" "sha256=%s" ] ]\n' "$(< var.with-dkml.location.mixed )" "$(< with-dkml.sha256 )"
+      printf 'file-depends: [ [ "%s" "sha256=%s" ] ]\n' "$(cat var.with-dkml.location.mixed )" "$(cat with-dkml.sha256 )"
       printf 'variables {\n'
-      printf '  location-native: "%s"\n' "$(< var.with-dkml.location.native)" | sed "s/[$backslash]/$backslash$backslash$backslash$backslash/g"
-      printf '  location-mixed: "%s"\n' "$(< var.with-dkml.location.mixed )"
+      printf '  location-native: "%s"\n' "$(cat var.with-dkml.location.native)" | sed "s/[$backslash]/$backslash$backslash$backslash$backslash/g"
+      printf '  location-mixed: "%s"\n' "$(cat var.with-dkml.location.mixed )"
       printf '}\n'
     } > '%{name}%.config'
     """
