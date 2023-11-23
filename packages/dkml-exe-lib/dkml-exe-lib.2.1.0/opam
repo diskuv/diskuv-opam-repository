@@ -1,6 +1,5 @@
 opam-version: "2.0"
-synopsis:
-  "Library containing all the code for the 'dkml' (Diskuv OCaml) executable"
+synopsis: "Library containing all the code for the 'dkml' executable"
 description:
   "'dkml init' creates a local Windows-friendly Opam switch configured with DKML Opam repositories and options"
 maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
@@ -38,6 +37,6 @@ dev-repo: "git+https://github.com/diskuv/dkml-runtime-apps.git"
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-runtime-apps.tar.gz"
   checksum: [
-    "sha512=a2d5dd294d468d649f98207643792b0ad46a6baf197578d25280b167f0f8693ada4edbe27fc096d297660397c00545495f6c0086e00086eb8266fd0f4f1aa813"
+    "sha512=bd401467751f52dd6ae7bb7d989ef15acdeda34cd6fa8d8d7b3e9f07e6262e1b40f32c6008879fb576baf9311bdf7bcb7f1e61ead2da973e74ea26f115c6d556"
   ]
 }

@@ -27,6 +27,6 @@ build: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-workflows.tar.gz"
   checksum: [
-    "sha512=aaa0a8d90e90b5bfd033143568308466078ec210e9604215afcb503d4553cfe444079c4eb3b285a3d15984a8ac9fb519473e915a601fc8d2aaa8634c21e878bd"
+    "sha512=e650ccb75b9a4fda10105590b7606822ed62ac0789e06c6aa15c0d40072712c0f453c9a1544b299d7be4e38294ff2e1a4bf59f9e23cf123ae537df123840432b"
   ]
 }
