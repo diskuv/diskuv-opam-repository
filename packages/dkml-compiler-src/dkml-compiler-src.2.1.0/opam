@@ -15,6 +15,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-compiler.tar.gz"
   checksum: [
-    "sha512=b9e96e3fb2831aed6a2b261125ccecb1dca128a5b6e8681888534a4237e3ce2f96c3d6a9d6e37017c638c04ca1b09fe2fc98e1df7da06663e6d2fb012d6d109e"
+    "sha512=c0c2ff3dd1e432f8bca2a726362d5e22fee2929d029ba2fd6712253dff1c96d32ccd1cedb2b4bb4f3bfea72107e451f150999f566f109f5ad0f3373d779f9470"
   ]
 }
