@@ -1,8 +1,8 @@
 opam-version: "2.0"
 synopsis:
-  "GitLab CI/CD and GitHub Action workflows used by and with Diskuv OCaml (DKML) tooling"
+  "GitLab CI/CD and GitHub Action workflows used by and with DkML tooling"
 description:
-  "GitLab CI/CD and GitHub Action workflows used by and with Diskuv OCaml (DKML) tooling."
+  "GitLab CI/CD and GitHub Action workflows used by and with DkML tooling."
 maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
 authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
 license: "Apache-2.0"
@@ -27,6 +27,6 @@ build: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-workflows.tar.gz"
   checksum: [
-    "sha512=741424efa064b8a5afcb4a81d4c1e09041d3990e0edf84cbd0015bce6687437e1b9989e40611b2f3b1da4bd0f0215239f3c35c9f181d3e78520976ab2638b96c"
+    "sha512=96511701b9f2c59e8cf0408062b77e08d397b0d3868eee414e863a22d6e8175b7fd8d2595288a52b73a0c590b4a09774cf895dd366afd724879c7ab1dd941e54"
   ]
 }

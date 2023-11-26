@@ -32,6 +32,6 @@ dev-repo: "git+https://github.com/diskuv/dkml-runtime-apps.git"
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-runtime-apps.tar.gz"
   checksum: [
-    "sha512=bb3106f6610be9bd699ff61f2e23f4d1ba7d0ee3b9f1d6804129be6bdd49d689e6e208633a4d3f18d87d7376724be92ce078a66d0ab936079889df87bc9e3bf9"
+    "sha512=11b8f5b18163f32270392e55769dc815cf89712233803b5789a0f87e6b531ae49d63372bc81e6baf630ddd0bbcc7fc85fc996d2d9fcadf32e39e1775a8886d9d"
   ]
 }

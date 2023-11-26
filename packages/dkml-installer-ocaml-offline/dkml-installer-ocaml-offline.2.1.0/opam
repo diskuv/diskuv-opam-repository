@@ -59,9 +59,10 @@ install: [
     # Later can add Dune cross-compiler to get Darwin ARM64.
     "--abi=windows_x86"
     "--abi=windows_x86_64"
-    # "--abi=linux_x86"
-    # "--abi=linux_x86_64"
-    # "--abi=darwin_x86_64"
+    "--abi=linux_x86"
+    "--abi=linux_x86_64"
+    "--abi=darwin_x86_64"
+    "--abi=darwin_arm64"
 
     "--work-dir"
     "%{_:share}%/w"
@@ -87,6 +88,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-installer-ocaml-byte.tar.gz"
   checksum: [
-    "sha512=a31e9043739b8e85179802f1fb72f775a1f49aee8eda84e6ce9975c0de6e7c2bc5d5343fcd9507bf48864b5eb82ba550d50d8063abc72ed9ef4f12a48caf0464"
+    "sha512=038b9ef677cbf202dba3a02d99d66f9f79d470ef5b5b77669cd0f9e0c5a25bedff07f5a4cd249c81fd40439d0650eaaa285ef70f8d01cd7ccb8f68e7f2c5d9fe"
   ]
 }
