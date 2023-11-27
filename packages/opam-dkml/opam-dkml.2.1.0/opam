@@ -33,6 +33,6 @@ flags: plugin
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-runtime-apps.tar.gz"
   checksum: [
-    "sha512=11b8f5b18163f32270392e55769dc815cf89712233803b5789a0f87e6b531ae49d63372bc81e6baf630ddd0bbcc7fc85fc996d2d9fcadf32e39e1775a8886d9d"
+    "sha512=ded463b459e5c57d5a791fd89258448e1566929ae6fd1b7a5d09532111d12093ac9a53fb388cc24ca9bf366c5c6c28890421f8aee7116bee0b981fdd6d40aa27"
   ]
 }
