@@ -72,8 +72,3 @@ of with-dkml.exe, while %{conf-withdkml:location-mixed}% will be the
 location of with-dkml.exe using only forward slashes (/).
 """
 flags: conf
-# DkML 2.0.3: checking for MSYS2 CLANG64 is the best way to detect DkML
-# using opam variables. Would really prefer that [conf-withdkml] could
-# be surrounded by an opam try-catch construct, but that sounds like a
-# big change (introduce a new, early prepare phase?) to the opam solver.
-available: msystem = "CLANG64"
