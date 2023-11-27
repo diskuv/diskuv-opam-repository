@@ -31,6 +31,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-runtime-common.tar.gz"
   checksum: [
-    "sha512=33ea84d237243246b0b8fa1a3395ea77f5a6a104bd1253a26de1b88672b17eb72f12d2f29cdbd34b122ad57604f83e040bc8be6921d176631acfa5260033fb6c"
+    "sha512=5482f08e28e947264e42af52117bb395c57e9dc494693a96e974ff7cb618f7082832da95abf49dcf060c002f49d911c20646f38b83b516004432664d2e01f3ac"
   ]
 }
