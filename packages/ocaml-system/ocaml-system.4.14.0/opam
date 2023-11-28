@@ -17,4 +17,4 @@ available: sys-ocaml-version = "4.14.0"
 flags: compiler
 build: ["ocaml" "gen_ocaml_config.ml"]
 substs: "gen_ocaml_config.ml"
-extra-files: ["gen_ocaml_config.ml.in" "md5=38586c7ba1cd038251cb4e0787041fe8"]
+extra-files: ["gen_ocaml_config.ml.in" "md5=163c7fb0279761bbdfac95f528b56607"]

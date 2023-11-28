@@ -7,11 +7,11 @@ let () =
         (Filename.chop_suffix s exe, exe)
       else
         (s, "") in
-    let (base, suffix) =
+    let base =
       if Filename.check_suffix base "-real" then
-        (Filename.chop_suffix base "-real", suffix)
+        Filename.chop_suffix base "-real"
       else
-        (base, suffix) in
+        base in
     base ^ "c" ^ suffix in
   if Sys.ocaml_version <> "%{_:version}%" then
     (Printf.eprintf
