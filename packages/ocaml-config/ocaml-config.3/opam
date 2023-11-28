@@ -18,6 +18,6 @@ depends: [
 ]
 substs: "gen_ocaml_config.ml"
 extra-files: [
-  ["gen_ocaml_config.ml.in" "md5=bc2d38ec5e9b2f4795e349d87ed37e60"]
+  ["gen_ocaml_config.ml.in" "md5=c1fb5045984c6b3e812060c7efc3944d"]
   ["ocaml-config.install"   "md5=8e50c5e2517d3463b3aad649748cafd7"]
 ]
