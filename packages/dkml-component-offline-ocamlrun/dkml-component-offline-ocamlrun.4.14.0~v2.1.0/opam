@@ -32,6 +32,6 @@ dev-repo: "git+https://github.com/diskuv/dkml-component-ocamlrun.git"
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-component-ocamlrun.tar.gz"
   checksum: [
-    "sha512=3bd9ae4785012e5f907d718d94f73bc81e7e07daafa1b0d95696ede05dcac0ae0069641732386958b3690c0ba1c980d9f40e897881e6a502c17be1609b784522"
+    "sha512=476df00cbfa7af314a2eabc695cd7778e5416bcb0f3dfb309f8cac250247a4d06bd4366e8ab219d1fd476e1794b3112608e131e6f343a257e773176b34f639ad"
   ]
 }
