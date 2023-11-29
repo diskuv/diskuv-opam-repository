@@ -44,9 +44,12 @@ build: [
     "sh"
     "-eufc"
     """
-    sed -i 's/(dune.exe as dune)/(dune.exe as dune-real)/'  bin/dune
-    sed -i 's/(run dune /(run dune-real /'                  doc/dune.inc
-    sed -i 's/{bin:dune}/{bin:dune-real}/g'                 doc/dune
+    sed 's/(dune.exe as dune)/(dune.exe as dune-real)/'  bin/dune      > bin/dune.tmp
+    sed 's/(run dune /(run dune-real /'                  doc/dune.inc  > doc/dune.inc.tmp
+    sed 's/{bin:dune}/{bin:dune-real}/g'                 doc/dune      > doc/dune.tmp
+    mv bin/dune.tmp     bin/dune
+    mv doc/dune.inc.tmp doc/dune.inc
+    mv doc/dune.tmp     doc/dune
     """
   ]  {conf-withdkml:installed}
   # original build instructions:
