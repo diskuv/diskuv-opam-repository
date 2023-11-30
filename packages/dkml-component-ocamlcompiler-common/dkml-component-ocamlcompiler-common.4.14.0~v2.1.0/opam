@@ -84,6 +84,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-component-ocamlcompiler.tar.gz"
   checksum: [
-    "sha512=f4ee4e5ff69ef584d82bea734a798454e53bd57935a2790c59045a6254830179b1c37f67c91b9af6a469d5816b2255463369f0a2a717335c4eeba90fae305b76"
+    "sha512=4b75b2c0f9fdf922e5f3190ac65583dcc6046cd80ee2791036963707afe6b44842df3e4bd47f457bbc0175c4742e550e640559d1c34e4f9dba7eca55e88992e0"
   ]
 }
