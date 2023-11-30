@@ -81,6 +81,10 @@ build: [
 
   # Overwrite opamshow-dkml-apps.txt to exclude what we staged in staging-dkmlconfdir. There should not be overlap.
   [ "sh" "-c" "OPAMLOGS=$PWD '%{conf-dkml-sys-opam:location-mixed}%' show --readonly --list-files dkml-apps | grep -v dkml-confdir > opamshow-dkml-apps.txt" ]
+
+  # Overwrite opamshow-ocamlfind.txt to exclude bin\ocamlfind.exe and man1/ocamlfind.1. [ocamlfind] should never be in the global PATH or it will
+  # interfere with dune in opam switches. Also remove unnecessary bin/safe_camlp4
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{conf-dkml-sys-opam:location-mixed}%' show --readonly --list-files ocamlfind | grep -v bin.ocamlfind | grep -v bin.safe_camlp4 | grep -v man1 > opamshow-ocamlfind.txt" ]
 ]
 install: [
   # BEGIN install-flavor-ci. DO NOT EDIT THE LINES IN THIS SECTION
@@ -110,6 +114,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=114ad9095dfbe8e0044b65b4dc55f3b16fc62ca5c1a15717c324cd7cd219ee47cbf7fc031a7602a9685f2c5b54a78e62a76908085b8167b8f4cbbee1620a26cb"
+    "sha512=bdb08b09d5362563d521e0dcc6e63ca45d9577518c05e03737d6d32de08c6c1212f6bd678b5587620de7546eccfa0e2e82785858a9b0b76bfa43a8738a6db68f"
   ]
 }
