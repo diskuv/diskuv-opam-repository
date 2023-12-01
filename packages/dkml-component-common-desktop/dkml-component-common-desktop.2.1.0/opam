@@ -34,6 +34,6 @@ dev-repo: "git+https://gitlab.com/dkml/components/dkml-component-desktop.git"
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=bdb08b09d5362563d521e0dcc6e63ca45d9577518c05e03737d6d32de08c6c1212f6bd678b5587620de7546eccfa0e2e82785858a9b0b76bfa43a8738a6db68f"
+    "sha512=fffcb3a277da7a3b867c7ec02a14dde1c0a919ed8c490d069810d226bbd5cca0fc4aa5ace4f4d6691199fbebc4f5ed571b68d771fbaf09acfef9992c94fe8f7b"
   ]
 }
