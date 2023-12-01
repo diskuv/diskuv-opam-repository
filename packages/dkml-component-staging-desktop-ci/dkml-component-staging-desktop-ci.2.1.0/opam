@@ -29,7 +29,6 @@ depends: [
   "stdlib-shims" {= "0.3.0"}
   "traverse" {= "0.3.0"}
   "with-dkml" {= "2.1.0"}
-  "xdg" {= "3.9.0"}
   "odoc" {with-doc}
 ]
 depopts: ["conf-withdkml"]
@@ -59,10 +58,8 @@ build: [
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files stdcompat > opamshow-stdcompat.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files stdlib-shims > opamshow-stdlib-shims.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files traverse > opamshow-traverse.txt" ]
-  [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files xdg > opamshow-xdg.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files dkml-apps > opamshow-dkml-apps.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files dkml-exe > opamshow-dkml-exe.txt" ]
-  [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files dune > opamshow-dune.txt" ]
   # END build-flavor-ci. DO NOT EDIT THE LINES ABOVE
 
   # NOTE: Below ocaml.exe + binaries and stdlib can replace the now
@@ -98,10 +95,8 @@ install: [
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-stdcompat.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-stdlib-shims.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-traverse.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
-  [ "dkml-desktop-copy-installed" "--file-list" "opamshow-xdg.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-dkml-apps.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/install" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-dkml-exe.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/install" ]
-  [ "dkml-desktop-copy-installed" "--file-list" "opamshow-dune.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/install" ]
   # END install-flavor-ci. DO NOT EDIT THE LINES ABOVE
 
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-stdlib.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
@@ -114,6 +109,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=fffcb3a277da7a3b867c7ec02a14dde1c0a919ed8c490d069810d226bbd5cca0fc4aa5ace4f4d6691199fbebc4f5ed571b68d771fbaf09acfef9992c94fe8f7b"
+    "sha512=601dd65967bc5adc3a751242f9a42829354c1eab3ccb5e297519a4ba6b0150af8d192a4b992ed1e3305fa083b11dad1d5dd2e67847709240c2110e198356cc21"
   ]
 }
