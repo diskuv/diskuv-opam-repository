@@ -40,6 +40,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=601dd65967bc5adc3a751242f9a42829354c1eab3ccb5e297519a4ba6b0150af8d192a4b992ed1e3305fa083b11dad1d5dd2e67847709240c2110e198356cc21"
+    "sha512=3596697e42c6b67de611030a72526f483366bd85d95d36c726e74b5ecedbc2f0418f436da0a1d337703d0eb5f6c1eff6e3221e293dfacb58ada2c3a3d70cd6d3"
   ]
 }
