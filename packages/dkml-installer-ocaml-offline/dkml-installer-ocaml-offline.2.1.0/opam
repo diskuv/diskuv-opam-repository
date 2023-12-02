@@ -88,6 +88,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.0/downloads/src.dkml-installer-ocaml-byte.tar.gz"
   checksum: [
-    "sha512=e7da971f6b17737c2141e809da16d54ff9dadc46fd05c0186594eba9d2c88a1a165073a70e84f4a93743155d18cc483d80e2181882022bc101870b2c87c84995"
+    "sha512=7e4a04bf237c2695a32cb6528e423d476dc8d13f5bfff2958bf361e3303b86213494518fa893ec9daf3c82acffab6d3881d9febeb250968a89bdc072bccad5b0"
   ]
 }
