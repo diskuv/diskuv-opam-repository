@@ -26,9 +26,9 @@ shell interpreter. Shexp works on both Unix and Windows.
 "
 url {
   src:
-    "https://github.com/jonahbeckford/shexp/archive/refs/tags/v0.16.0-msvc.tar.gz"
+    "https://github.com/jonahbeckford/shexp/archive/refs/tags/v0.16.0-msvc-find_executable.tar.gz"
   checksum: [
-    "md5=9f91ae4e09f181088bf5daa1649dc2f6"
-    "sha512=1beedcae10d120f5d69b8fe7f1b739db598b86ac77a8dbc8ddeb4034391d162b00aac7d528a4c04f3483c103bd25416de90fb0d93536803c1d931a717e431f7c"
+    "md5=4f6c5f4e653d154bc7c9d81e92a375b6"
+    "sha512=dec6728d8ff84b265a83e812be9ed56f70173ea75f50b5761f28fe223dd71e75f07747552f195bc7849e58bc1763a96b615917ef4bf7bdf92215e6b6e9895d71"
   ]
 }
