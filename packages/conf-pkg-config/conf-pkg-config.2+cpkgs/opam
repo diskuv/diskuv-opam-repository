@@ -5,9 +5,9 @@ homepage: "http://www.freedesktop.org/wiki/Software/pkg-config/"
 bug-reports: "https://github.com/ocaml/opam-repository/issues"
 license: "GPL-1.0-or-later"
 build: [
-  ["pkg-config" "--help"]                   {os != "openbsd" & os-distribution != "msys2" & os != "macos" }
+  ["pkg-config" "--help"]                   {os != "openbsd" & os-distribution != "win32" & os-distribution != "msys2" & os != "macos" }
   ["/usr/local/bin/pkgconf" "--help"]       {os = "openbsd"}
-  ["tar" "xvf" "pkgconf.tar.gz"]            {os-distribution = "msys2"}
+  ["tar" "xvf" "pkgconf.tar.gz"]            {os-distribution = "msys2" | os-distribution = "win32"}
   ["sh" "-eufxc"
    """
    if command -v pkg-config; then
@@ -32,7 +32,7 @@ install: [
     install windows_x86/pkgconf.exe '%{bin}%/pkg-config.exe'
     install windows_x86/pkgconf-3.dll '%{bin}%'
     """
-  ] {os-distribution = "msys2"}
+  ] {os-distribution = "msys2" | os-distribution = "win32"}
 
   # Do not rely on /opt/homebrew/bin being in PATH. It isn't when with-dkml.exe is used,
   # and putting homebrew in PATH makes reproducibility and end-user (beginner) troubleshooting
@@ -49,7 +49,7 @@ install: [
 ]
 post-messages: [
   "conf-pkg-config: A symlink to /usr/local/bin/pkgconf has been installed in the OPAM bin directory (%{bin}%) on your PATH as 'pkg-config'. This is necessary for correct operation." {os = "openbsd"}
-  "conf-pkg-config: pkgconf and its DLL have been installed in the OPAM bin directory (%{bin}%) on your PATH as 'pkg-config'. This is necessary for correct operation." {os-distribution = "msys2"}
+  "conf-pkg-config: pkgconf and its DLL have been installed in the OPAM bin directory (%{bin}%) on your PATH as 'pkg-config'. This is necessary for correct operation." {os-distribution = "msys2" | os-distribution = "win32"}
   "conf-pkg-config: A symlink to /opt/homebrew/bin/pkg-config has been installed in the OPAM bin directory (%{bin}%) on your PATH as 'pkg-config'. This is necessary for correct operation." {os = "macos" & os-distribution = "homebrew"}
 ]
 depexts: [
