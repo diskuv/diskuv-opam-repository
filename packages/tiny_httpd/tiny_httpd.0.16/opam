@@ -48,7 +48,7 @@ url {
   src:
     "https://github.com/jonahbeckford/tiny_httpd/releases/download/v0.16-win32/src.tar.gz"
   checksum: [
-    "md5=0b1d5fa60afb260c19fa403df9773626"
-    "sha512=4ebd489227724a3a8f5e5d539a7b6af5951ca7f9e2c11c648493682d9049f4afc4652f0b0c88558dfa9844c4749c3e081c070cd949b7c6e77f1634658532d9c7"
+    "md5=a24d16a4829a2cf78041f35ad6dc2c38"
+    "sha512=cb4387df1e569e62b5ade77ada3e370696b6e12aff11849bef151e3aaaba35622d69f82b98b132820d4124fa64d4d5c12e33df8863c5c1ed545d510b39794d5b"
   ]
 }
