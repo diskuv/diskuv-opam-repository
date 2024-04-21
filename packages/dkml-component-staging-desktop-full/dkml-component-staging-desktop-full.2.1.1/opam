@@ -23,6 +23,8 @@ depends: [
   "dkml-apps" {= "2.1.1"}
   "dkml-exe" {= "2.1.1"}
   "graphics" {= "5.1.2"}
+  "hmap" {= "0.8.1"}
+  "iostream" {= "0.2.2"}
   "lambda-term" {= "3.3.2"}
   "logs" {= "0.7.0"}
   "lwt" {= "5.7.0"}
@@ -46,6 +48,7 @@ depends: [
   "sqlite3" {= "5.1.0+msvc"}
   "stdcompat" {= "19+optautoconf"}
   "stdlib-shims" {= "0.3.0"}
+  "tiny_httpd" {= "0.16"}
   "traverse" {= "0.3.0"}
   "trie" {= "1.0.0"}
   "uchar" {= "0.0.2"}
@@ -79,6 +82,8 @@ build: [
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files conf-sqlite3 > opamshow-conf-sqlite3.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files csexp > opamshow-csexp.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files graphics > opamshow-graphics.txt" ]
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files hmap > opamshow-hmap.txt" ]
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files iostream > opamshow-iostream.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files lambda-term > opamshow-lambda-term.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files logs > opamshow-logs.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files lwt > opamshow-lwt.txt" ]
@@ -98,6 +103,7 @@ build: [
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files sqlite3 > opamshow-sqlite3.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files stdcompat > opamshow-stdcompat.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files stdlib-shims > opamshow-stdlib-shims.txt" ]
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files tiny_httpd > opamshow-tiny_httpd.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files traverse > opamshow-traverse.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files trie > opamshow-trie.txt" ]
   [ "sh" "-c" "OPAMLOGS=$PWD '%{dkml-sys-opam-exe}%' show --readonly --list-files uchar > opamshow-uchar.txt" ]
@@ -143,6 +149,8 @@ install: [
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-conf-sqlite3.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-csexp.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-graphics.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
+  [ "dkml-desktop-copy-installed" "--file-list" "opamshow-hmap.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
+  [ "dkml-desktop-copy-installed" "--file-list" "opamshow-iostream.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-lambda-term.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-logs.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-lwt.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
@@ -162,6 +170,7 @@ install: [
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-sqlite3.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-stdcompat.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-stdlib-shims.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
+  [ "dkml-desktop-copy-installed" "--file-list" "opamshow-tiny_httpd.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-traverse.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-trie.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
   [ "dkml-desktop-copy-installed" "--file-list" "opamshow-uchar.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-abi}%/compile" ]
@@ -191,6 +200,6 @@ install: [
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.1/downloads/src.dkml-component-desktop.tar.gz"
   checksum: [
-    "sha512=f76cf4814a2a7b6a723033fa4d3fe830d2e887f0a5c4e49b4ec8f87c36cec942cbfc382834c344861697d1f2914bb049cf20aed7ed2dc7b647ba0d4a82889702"
+    "sha512=db706c087499fb7e85dacbf242e6a339401013dc4ee28f8a43217f81d3d775a0b79f9c99aab03421766da37c4685f8542ba50730ecd2e26941918cee487cd21c"
   ]
 }

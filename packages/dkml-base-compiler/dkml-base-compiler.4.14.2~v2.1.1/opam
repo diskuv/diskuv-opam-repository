@@ -263,6 +263,6 @@ extra-source "dl/darwin_arm64-ocamlc.opt" {
 url {
   src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.1/downloads/src.dkml-compiler.tar.gz"
   checksum: [
-    "sha512=970167e77bfd8d67015a5e1c4d8463bbd1a96fa2e3d555c51ebdffa1bf0c8642dcf63fb6b90ca441a0dac9dff29be8f44f5e9536c751e5289101b8980e20d7ce"
+    "sha512=42336487b4b72c2db1d719d69f1a68683dbd890a14760ac7491e9ca4a8719198678437ebab7216697d34d86c1dd9f9825de655cd3b7d7f9046966142bec63c81"
   ]
 }
