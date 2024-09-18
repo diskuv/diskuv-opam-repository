@@ -1,0 +1,54 @@
+opam-version: "2.0"
+synopsis: "OCaml debug adapter"
+maintainer: "Simmo Saan <simmo.saan@gmail.com>"
+authors: "hackwaly@qq.com"
+license: "MIT"
+homepage: "https://github.com/hackwaly/ocamlearlybird"
+bug-reports: "https://github.com/hackwaly/ocamlearlybird/issues"
+depends: [
+  "dune" {>= "2.8"}
+  "ocaml" {>= "4.14.2"}
+  "dkml-base-compiler" {>= "4.14.2" & < "5.0.0"}
+  "ppx_deriving" {>= "5.1"}
+  "ppx_deriving_yojson" {>= "3.6.1"}
+  "menhir" {>= "20201216" & build}
+  "menhirLib" {>= "20201216"}
+  "ocaml-compiler-libs" {>= "v0.12.3"}
+  "ppx_optcomp" {>= "v0.11"}
+  "iter" {>= "1.2.1"}
+  "lwt" {>= "5.4.0"}
+  "lwt_ppx" {>= "2.0.1"}
+  "lwt_react" {>= "1.1.3"}
+  "cmdliner" {>= "1.1.0"}
+  "logs" {>= "0.7.0"}
+  "fmt" {>= "0.8.9"}
+  "path_glob" {>= "0.2"}
+  "sexplib" {>= "v0.14.0"}
+  "csexp" {>= "1.3.2"}
+  "lru" {>= "0.3.0"}
+  "dap" {>= "1.0.6"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/hackwaly/ocamlearlybird.git"
+url {
+  src:
+    "https://github.com/jonahbeckford/ocamlearlybird/releases/download/1.3.2%2Bdkml-4_14-backport-linearclosures/src.tar.gz"
+  checksum: [
+    "md5=9680942f378f7a102fb0a678dc681d12"
+    "sha512=7f0e30cd71fc08ec284a10ad09c7f645cfac171a863d2b4ff15ad14978d62d95aeb6bef47ef31bc090bf62d6ebb3da4686eb8e570b7492014cbe70bf4609f236"
+  ]
+}
