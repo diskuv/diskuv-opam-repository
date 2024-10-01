@@ -1,0 +1,57 @@
+opam-version: "2.0"
+synopsis: "The presence of this package means at least one dkml-target-abi-* package is present."
+description: """
+When a package should be selected based on the target ABI rather than the host ABI,
+the opam's "arch" architecture variable should not be used when _any_ dkml-target-abi-* package is present.
+For example, an Apple Silicon host machine supports both ARM64 and Intel architectures, but
+the "arch" variable will always be arm64 even when a cross-compiling "ocamlopt -config" says the
+"architecture" is x86_64. The presence of dkml-target-abi-darwin_x86_64
+should force the selection of the Intel architecture variant, just as the presence of
+dkml-target-abi-darwin_x86_64 tells dkml-base-compiler to create OCaml binaries for Intel.
+
+Multiple dkml-target-abi-* packages may be present when multiple ABIs should be available for cross-compilation.
+The dkml-target-abi-any package will be present if one or more dkml-target-abi-* packages are present.
+
+The typical use case is when you have several binary packages that you have precompiled, and
+your ocamlopt is a cross-compiler that reports a "architecture" that is in conflict with "arch".
+Using dkml-target-abi-any will simplify your opam package filters.
+
+Usage:
+
+Instead of the incorrect selector:
+  depends: [
+    "somebinary-macos-x86_64" { arch = "x86_64" & os = "macos" }
+    "somebinary-macos-arm64" { arch = "arm64" & os = "macos" }
+  ]
+use:
+  depopts: [
+    "dkml-target-abi-any"
+    "dkml-target-abi-android_arm32v7a"
+    "dkml-target-abi-android_arm64v8a"
+    "dkml-target-abi-android_x86"
+    "dkml-target-abi-android_x86_64"
+    "dkml-target-abi-darwin_arm64"
+    "dkml-target-abi-darwin_x86_64"
+    "dkml-target-abi-linux_x86"
+    "dkml-target-abi-linux_x86_64"
+    "dkml-target-abi-windows_arm64"
+    "dkml-target-abi-windows_x86"
+    "dkml-target-abi-windows_x86_64"
+  ]
+  depends: [
+    "somebinary-macos-x86_64" {
+      dkml-target-abi-darwin_x86_64:installed |
+      (!dkml-target-abi-any:installed & (arch = "x86_64" & os = "macos"))
+    }
+    "somebinary-macos-arm64" {
+      dkml-target-abi-darwin_arm64:installed |
+      (!dkml-target-abi-any:installed & (arch = "arm64" & os = "macos"))
+    }
+  ]
+"""
+maintainer: ["opensource+dkml@support.diskuv.com"]
+authors: ["Diskuv, Inc. <opensource+dkml@support.diskuv.com>"]
+license: "Apache-2.0"
+homepage: "https://diskuv.com/dkmlbook/"
+bug-reports: "https://gitlab.com/dkml/distributions/dkml/-/issues"
+flags: compiler

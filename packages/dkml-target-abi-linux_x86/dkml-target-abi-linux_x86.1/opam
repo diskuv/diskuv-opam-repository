@@ -14,3 +14,4 @@ flags: compiler
 depends: [
     "ocaml-option-32bit" { arch = "x86_64" }
 ]
+depends: [ "dkml-target-abi-any" ]

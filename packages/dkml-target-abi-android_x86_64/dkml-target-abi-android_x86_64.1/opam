@@ -14,3 +14,4 @@ flags: compiler
 conflicts: [
   "ocaml-option-32bit"
 ]
+depends: [ "dkml-target-abi-any" ]
