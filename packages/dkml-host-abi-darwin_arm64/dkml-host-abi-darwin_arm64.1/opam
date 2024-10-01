@@ -15,4 +15,5 @@ bug-reports: "https://gitlab.com/dkml/distributions/dkml/-/issues"
 flags: compiler
 conflict-class: "dkml-host-abi"
 available: [os = "macos" & arch = "arm64"]
-depends: [ "dkml-target-abi-darwin_arm64" ]
+# Apple Silicon can run Intel
+depends: [ "dkml-target-abi-darwin_x86_64" | "dkml-target-abi-darwin_arm64" ]

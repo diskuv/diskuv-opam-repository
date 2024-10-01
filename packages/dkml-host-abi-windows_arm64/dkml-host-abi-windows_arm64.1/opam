@@ -19,4 +19,5 @@ bug-reports: "https://gitlab.com/dkml/distributions/dkml/-/issues"
 flags: compiler
 conflict-class: "dkml-host-abi"
 available: [os = "win32" & arch = "arm64"]
-depends: [ "dkml-target-abi-windows_arm64" ]
+# Windows ARM64 can emulate (slowly) x86_64
+depends: [ "dkml-target-abi-windows_arm64" | "dkml-target-abi-windows_x86_64" ]

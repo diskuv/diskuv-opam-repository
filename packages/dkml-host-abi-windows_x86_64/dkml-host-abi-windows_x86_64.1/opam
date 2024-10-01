@@ -15,4 +15,5 @@ bug-reports: "https://gitlab.com/dkml/distributions/dkml/-/issues"
 flags: compiler
 conflict-class: "dkml-host-abi"
 available: [os = "win32" & arch = "x86_64"]
-depends: [ "dkml-target-abi-windows_x86_64" ]
+# A Windows host can run 32-bit Windows
+depends: [ "dkml-target-abi-windows_x86" | "dkml-target-abi-windows_x86_64" ]
