@@ -16,4 +16,4 @@ flags: compiler
 conflict-class: "dkml-host-abi"
 available: [os = "macos" & arch = "arm64"]
 # Apple Silicon can run Intel
-depends: [ "dkml-target-abi-darwin_x86_64" | "dkml-target-abi-darwin_arm64" ]
+depends: [ "dkml-target-abi-darwin_x86_64" | "dkml-target-abi-darwin_arm64" | "dkml-target-abi-android_x86_64" | "dkml-target-abi-android_arm64v8a"  ]
