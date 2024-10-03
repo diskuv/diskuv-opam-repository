@@ -13,5 +13,5 @@ bug-reports: "https://gitlab.com/dkml/distributions/dkml/-/issues"
 flags: compiler
 depends: [
     "ocaml-option-32bit" { arch = "x86_64" }
+    "dkml-target-abi-any"
 ]
-depends: [ "dkml-target-abi-any" ]
