@@ -10,6 +10,19 @@ depends: [
   "ocaml-system"        {>= "4.14.2~" & < "4.14.3~"} |
   "dkml-base-compiler"  {>= "4.14.2~" & < "4.14.3~"}
 ]
+depopts: [
+  "dkml-target-abi-android_arm64v8a"
+  "dkml-target-abi-android_arm32v7a"
+  "dkml-target-abi-android_x86_64"
+  "dkml-target-abi-android_x86"
+  "dkml-target-abi-darwin_arm64"
+  "dkml-target-abi-darwin_x86_64"
+  "dkml-target-abi-linux_x86_64"
+  "dkml-target-abi-linux_x86"
+  "dkml-target-abi-windows_x86_64"
+  "dkml-target-abi-windows_arm64"
+  "dkml-target-abi-windows_x86"
+]
 build: [
   [
     "bash"
@@ -33,15 +46,8 @@ install: [
     "%{ocaml-system:path}%/../opt/mlcross"  { ocaml-system:installed }
     "%{dkml-base-compiler:share}%/mlcross"  { dkml-base-compiler:installed }
   ]
-  [
-    "bash"
-    "toolchain/add-findlib-conf.sh"
-    "%{prefix}%"
-    "%{ocaml-system:path}%/../opt/mlcross"  { ocaml-system:installed }
-    "%{dkml-base-compiler:share}%/mlcross"  { dkml-base-compiler:installed }
-  ]
 ]
-maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
+maintainer: ["opensource+dkml@support.diskuv.com"]
 extra-source "dl/findlib-1.9.5.tar.gz" {
   src: "http://download.camlcity.org/download/findlib-1.9.5.tar.gz"
   checksum: [
