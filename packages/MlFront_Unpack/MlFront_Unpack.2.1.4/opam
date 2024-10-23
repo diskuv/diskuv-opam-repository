@@ -1,0 +1,31 @@
+opam-version: "2.0"
+synopsis:
+  "Executable MlFront_Unpack.Unpack that unpacks MlFront_Config's RemoteSpec packages"
+maintainer: "Diskuv, Inc. <opensource+dkml@support.diskuv.com>"
+authors: "Diskuv, Inc. <opensource+dkml@support.diskuv.com>"
+license: "Apache-2.0 AND LGPL-2.1-or-later with OCaml-LGPL-linking-exception"
+homepage: "https://diskuv.com/mlfront/overview-1/"
+bug-reports: "https://gitlab.com/dkml/build-tools/MlFront/-/issues"
+depends: [
+  "ocaml" {>= "4.13"}
+  "MlFront_Cli" {with-dev-setup & >= "2.1.4~prerel2"}
+]
+build: [
+  ["mkdir" "target"] {os = "win32"}
+  [".\\build.cmd"] {os = "win32"}
+  ["copy" "MlFront_Unpack.install.win32" "MlFront_Unpack.install"]
+    {os = "win32"}
+  ["install" "-d" "target"] {!(os = "win32")}
+  ["sh" "build.sh"] {!(os = "win32")}
+  ["cp" "MlFront_Unpack.install.unix" "MlFront_Unpack.install"]
+    {!(os = "win32")}
+]
+dev-repo: "git+https://gitlab.com/dkml/build-tools/MlFront_Unpack.git"
+url {
+  src:
+    "https://gitlab.com/dkml/build-tools/MlFront_Archive/-/archive/2.1.4/MlFront_Archive-2.1.4.zip"
+  checksum: [
+    "md5=b8c5ea6e4f07e98017848588aebac330"
+    "sha512=450a90e800b6ff06b9aed0dfbf9d317d0f4c7a23418b7c99141dce22fa9c90c27fb3883cab72e7ef3103d4be14c356d5858a111a0541348bdcbe2a829f034ad4"
+  ]
+}
