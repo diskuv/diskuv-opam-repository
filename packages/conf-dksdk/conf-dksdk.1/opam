@@ -1,0 +1,11 @@
+opam-version: "2.0"
+maintainer: ["support@diskuv.com"]
+authors: ["Diskuv, Inc. <support@diskuv.com>"]
+# TODO: Subsite for DkSDK
+homepage: "https://diskuv.com"
+bug-reports: "https://diskuv.com"
+license: "LicenseRef-CommercialDiskuvLicense"
+build: []
+description: """
+This package is only installed in DkSDK created switches."""
+flags: conf
