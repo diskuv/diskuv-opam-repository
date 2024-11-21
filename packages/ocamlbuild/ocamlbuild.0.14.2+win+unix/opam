@@ -40,16 +40,12 @@ url {
   # 0.14.2 + the following:
   # - https://github.com/ocaml/ocamlbuild/pull/323
   # - https://github.com/ocaml/ocamlbuild/pull/324
-  src: "https://github.com/jonahbeckford/ocamlbuild/releases/download/0.14.2-win32-all-r1/src.tar.gz"
+  # - Compile nativecode manpage generator
+  src: "https://github.com/jonahbeckford/ocamlbuild/releases/download/0.14.2-win32-all-r2/src.tar.gz"
   checksum: [
-    "md5=849d3726409e35a5625a36676fcf5306"
-    "sha512=ab4099c321a54537dd7c7f0225bad0ce1689314ca806602d6ac92b4598f56191147d1e35782286beb96d0b34d7275e2c5a0cf9de82dced9a9beaea7719ace374"
+    "sha512=c7638715efd8de881e57d22baa7141a0e964704c3fe4557abeebce57bc86355ecfdbe5ad8ac0abdd7e73c7164da62ca36cbdba2716a1d88cabd3546f7adcdf3c"
   ]
 }
-extra-source "ocamlbuild-0.14.2.patch" {
-  src: "https://raw.githubusercontent.com/ocaml-opam/opam-repository-mingw/354a87b397856f2a70024c5c83fc5001074935b6/packages/ocamlbuild/ocamlbuild.0.14.2/files/ocamlbuild-0.14.2.patch"
-  checksum: "sha256=a9b7e1829a3304e5a073d8ddea29d3d8272698e93b7e1ee659ae5e31e5cfb6b9"
-}
 patches: [
-    "ocamlbuild-0.14.2.patch" {os = "win32"}
+    "ocamlbuild-0.14.2-win32.patch" {os = "win32"}
 ]
