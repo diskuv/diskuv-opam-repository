@@ -14,5 +14,5 @@ homepage: "https://diskuv.com/dkmlbook/"
 bug-reports: "https://gitlab.com/dkml/distributions/dkml/-/issues"
 flags: compiler
 conflict-class: "dkml-host-abi"
-available: [os = "macos" & arch = "x86_64"]
+available: [os = "macos"]
 depends: [ "dkml-target-abi-darwin_x86_64" | "dkml-target-abi-android_x86_64" ]
