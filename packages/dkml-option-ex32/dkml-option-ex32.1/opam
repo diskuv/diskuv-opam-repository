@@ -1,4 +1,0 @@
-opam-version: "2.0"
-synopsis: "Use the __ex32 ABI modifier which makes the OCaml architecture 32-bit even if the native C architecture is 64-bit"
-maintainer: ["opensource+dkml@support.diskuv.com"]
-flags: compiler
