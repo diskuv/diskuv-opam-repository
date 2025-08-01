@@ -12,13 +12,11 @@ depends: [
 ]
 build: [
   ["mkdir" "target"] {os = "win32"}
-  [".\\build.cmd"] {os = "win32"}
-  ["copy" "MlFront_Unpack.install.win32" "MlFront_Unpack.install"]
-    {os = "win32"}
+  ["cmd" "/c" ".\\build.cmd"] {os = "win32"}
+  ["cmd" "/c" "copy" "MlFront_Unpack.install.win32" "MlFront_Unpack.install"] {os = "win32"}
   ["install" "-d" "target"] {!(os = "win32")}
   ["sh" "build.sh"] {!(os = "win32")}
-  ["cp" "MlFront_Unpack.install.unix" "MlFront_Unpack.install"]
-    {!(os = "win32")}
+  ["cp" "MlFront_Unpack.install.unix" "MlFront_Unpack.install"] {!(os = "win32")}
 ]
 dev-repo: "git+https://gitlab.com/dkml/build-tools/MlFront_Unpack.git"
 url {
