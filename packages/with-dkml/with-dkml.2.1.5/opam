@@ -1,0 +1,42 @@
+opam-version: "2.0"
+synopsis: "Gives Windows access to Opam and MSYS2 environments"
+maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
+authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
+license: "Apache-2.0"
+homepage: "https://diskuv.gitlab.io/diskuv-ocaml"
+bug-reports: "https://github.com/diskuv/dkml-runtime-apps/issues"
+depends: [
+  "dune" {>= "2.9"}
+  "ocaml" {>= "4.12.1"}
+  "dkml-runtimelib" {= version}
+  "dkml-runtimescripts" {= version}
+  "dkml-runtime-common" {= version}
+  "logs" {>= "0.7.0"}
+  "fmt" {>= "0.8.9"}
+  "sha" {>= "1.15.2"}
+  "crunch" {>= "3.3.1"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+dev-repo: "git+https://github.com/diskuv/dkml-runtime-apps.git"
+url {
+  src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.5/downloads/src.dkml-runtime-apps.tar.gz"
+  checksum: [
+    "sha512=749560ad51e85fa20e5ecc1275eb10a3f7bf525dfe591ccaefebbbc48c50ffb032f584b840e68cb825d71005b67adb92a836c5db422ca3814b40abed6d2f2a80"
+  ]
+}
