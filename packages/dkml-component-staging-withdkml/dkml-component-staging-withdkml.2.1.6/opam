@@ -1,0 +1,46 @@
+opam-version: "2.0"
+synopsis: "Places with-dkml binary into the DKML staging-files"
+description: "Places with-dkml binary into the DKML staging-files"
+maintainer: ["opensource+diskuv-ocaml@support.diskuv.com"]
+authors: ["Diskuv, Inc. <opensource+diskuv-ocaml@support.diskuv.com>"]
+license: "Apache-2.0"
+homepage: "https://gitlab.com/dkml/components/dkml-component-desktop"
+doc:
+  "https://gitlab.com/dkml/components/dkml-component-desktop/-/blob/main/README.md"
+bug-reports:
+  "https://gitlab.com/dkml/components/dkml-component-desktop/-/issues"
+depends: [
+  "dune" {>= "3.6"}
+  "conf-dkml-sys-opam"
+  "dkml-build-desktop" {= version}
+  "dkml-host-abi"
+  "dkml-install" {>= "0.2.0"}
+  "diskuvbox" {>= "0.1.0"}
+  "odoc" {with-doc}
+]
+dev-repo: "git+https://gitlab.com/dkml/components/dkml-component-desktop.git"
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+
+  [ "sh" "-c" "OPAMLOGS=$PWD '%{conf-dkml-sys-opam:location-mixed}%' show --readonly --list-files with-dkml > opamshow-with-dkml.txt" ]
+]
+install: [
+  [ "dkml-desktop-copy-installed" "--file-list" "opamshow-with-dkml.txt" "--opam-switch-prefix" "%{prefix}%" "--output-dir" "%{_:share}%/staging-files/%{dkml-host-abi:abi}%" ]
+]
+url {
+  src: "https://gitlab.com/dkml/distributions/dkml/-/releases/2.1.6/downloads/src.dkml-component-desktop.tar.gz"
+  checksum: [
+    "sha512=fb9099fa03f37992f79ba0930873f8379322f06e6163c3e056a3c96297047930de6f8167601938583eedd4099fce31789f1e27698851b8f3870469e60c1be540"
+  ]
+}
