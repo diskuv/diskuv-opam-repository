@@ -1,0 +1,40 @@
+opam-version: "2.0"
+synopsis: "Parsing with combinators and indentation sensitivity"
+description: """
+
+A parsing library with combinators in the style of Haskell's parsec.
+
+The parsing combinators have support for indentation sensitivity. Therefore it
+is easy to parse yaml files and indentation sensitive languages like Haskell and
+Python.
+
+Futhermore it is easy to generate user friendly error messages.
+
+This is fmlib_parse 0.6.2 with one fix: a backtrackable parser allocates memory
+in proportion to the number of token it buffers. It is built from the branch
+fix/buffer-growing-array of https://github.com/jonahbeckford/fmlib.
+"""
+maintainer: "Helmut Brandl <helmut.brandl@gmx.net>"
+authors: [ "Helmut Brandl <helmut.brandl@gmx.net>" ]
+license: "BSD-3-Clause"
+homepage: "https://github.com/hbr/fmlib"
+dev-repo: "git+https://github.com/jonahbeckford/fmlib.git"
+bug-reports: "https://github.com/hbr/fmlib/issues"
+build: [
+    ["dune" "build" "-p" name "-j" jobs "@install" "@doc" {with-doc}]
+]
+depends: [
+    "ocaml" {>= "4.14.0"}
+    "dune" {>= "3.0.0"}
+    "odoc" {with-doc}
+    "ppx_inline_test" {>= "v0.13.0"}
+    "fmlib_std"    {= "0.6.2"}
+    "fmlib_pretty" {= "0.6.2"}
+]
+url {
+    src: "https://github.com/jonahbeckford/fmlib/archive/bd81882b5f0c53a63a3e7fb3c0711eb0634c332a.tar.gz"
+    checksum: [
+        "sha256=08dd9681868044a5c1c84979b1165106e653a6308d07f7a5fda77fd3a89c2992"
+        "sha512=1888fd709aa609da12419fe40a18806da975c94ee62247e86e872dc3dc35756bcf31ba5cfaa4c3705bfbb513cec1e20c757f47a1077edcf8871c68c68eb8d62d"
+    ]
+}
